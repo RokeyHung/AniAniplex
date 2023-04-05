@@ -1,0 +1,74 @@
+.playmovie {
+    width: 100%;
+}
+.playmovie-wrapper {
+}
+.playmovie-video {
+}
+.playmovie-current {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.current-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: all 0.1s ease;
+    color: #dadace;
+}
+.current-item i {
+    color: #757778;
+    font-size: 1.4rem;
+}
+.current-item:hover {
+    background-color: #3a3b3c;
+}
+
+.playmovie-listepisode {
+    background-color: #181d1f;
+    border-radius: 3px;
+    width: 100%;
+    padding: 10px 20px 16px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+.listepisode-title {
+    font-size: 1.4rem;
+    color: #78909c;
+    margin-bottom: 8px;
+}
+.listepisode-title i {
+    color: #757778;
+}
+.listepisode-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+.listepisode-item {
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: #4f4f4f;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    min-width: 40px;
+    text-align: center;
+}
+.listepisode-item:hover {
+    background-color: #ce9090;
+}
+.listepisode-list > .active {
+    background-color: var(--background-color-button);
+}

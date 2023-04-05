@@ -1,0 +1,439 @@
+.anime__content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)), var(--background-img);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding: 42px 26px;
+}
+
+.anime__content-img {
+    position: absolute;
+    top: 50%;
+    left: 26px;
+    transform: translateY(-50%);
+    width: 180px;
+    height: 260px;
+}
+
+.anime__content-img:hover .blur-opacity {
+    opacity: 1;
+}
+
+.blur-opacity {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: inherit;
+    width: inherit;
+    background-color: rgba(41, 36, 36, 0.35);
+    opacity: 0;
+    z-index: 10;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.anime__content-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.btn-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    box-shadow: 0 0 0 2px #fff;
+    background-color: rgba(30, 30, 30, 0.5);
+    transition: all 0.2s ease;
+}
+
+.contend-img-following {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    padding: 6px 10px;
+    background-color: rgba(0, 0, 0, 0.55);
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 3px;
+    z-index: 12;
+    cursor: pointer;
+}
+
+.contend-img-following:hover {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.contend-img-following i {
+    color: rgb(212, 207, 207);
+}
+
+.contend-img-following:hover i {
+    color: rgb(34, 96, 189);
+}
+
+.anime__content-img > .btn-play > i {
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6rem;
+    z-index: 11;
+}
+
+.xemphim {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 6px 0;
+    text-align: center;
+    background-color: #cf1f1fd4;
+}
+
+.anime__content-introduce {
+    padding-left: 20px;
+    width: calc(100% - 186px);
+    float: right;
+}
+
+.anime__content-title {
+    font-size: 3rem;
+    line-height: 3rem;
+    color: var(--color-icon);
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding: 7px 0;
+    font-weight: 500;
+}
+
+.anime__content-nameJP {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.anime__content-description {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    font-weight: 500;
+    line-height: 1.9rem;
+    border-bottom: 1px solid rgba(159, 159, 159, 0.7);
+    overflow-y: scroll;
+    max-height: 11.4rem;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+}
+.anime__content-description::-webkit-scrollbar {
+    width: 4px;
+}
+.anime__content-evaluate {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    font-weight: 500;
+}
+
+.evaluate-percent {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: conic-gradient(var(--color-icon) 360deg, transparent 0deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 100%;
+}
+.evaluate-percent::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000;
+}
+.evaluate-percent span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.evaluate-left {
+    display: flex;
+    align-items: center;
+    padding-right: 14px;
+    border-right: 1px solid rgba(159, 159, 159, 0.7);
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+    gap: 10px;
+}
+.evaluate-right {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    white-space: nowrap;
+    padding-left: 14px;
+    gap: 16px;
+}
+.evaluate-right i {
+    color: #a2a2a2;
+}
+.evaluate-rate {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.evaluate-star {
+    color: #ffc107;
+    line-height: 1.2rem;
+}
+
+@media screen and (max-width: 670px) {
+    .anime__content-img {
+        position: relative;
+        transform: none;
+        margin: 1.6rem auto;
+        top: 0;
+        left: 0;
+    }
+    .anime__content-introduce {
+        width: 100% !important;
+        padding: 0;
+        float: none;
+    }
+    .anime__content-description {
+        overflow-y: unset;
+        max-height: unset;
+    }
+}
+
+/* Bootstrap */
+
+.fade {
+    transition: opacity 0.15s linear;
+}
+
+.nav {
+    --bs-nav-link-padding-x: 1rem;
+    --bs-nav-link-padding-y: 0.5rem;
+    --bs-nav-link-font-weight: ;
+    --bs-nav-link-color: var(--bs-link-color);
+    --bs-nav-link-hover-color: var(--bs-link-hover-color);
+    --bs-nav-link-disabled-color: var(--bs-secondary-color);
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav-link {
+    display: block;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: var(--bs-nav-link-color);
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--bs-nav-link-hover-color);
+}
+.nav-link.disabled {
+    color: var(--bs-nav-link-disabled-color);
+    pointer-events: none;
+    cursor: default;
+}
+
+.nav-tabs {
+    --bs-nav-tabs-border-width: var(--bs-border-width);
+    --bs-nav-tabs-border-color: var(--bs-border-color);
+    --bs-nav-tabs-border-radius: var(--bs-border-radius);
+    --bs-nav-tabs-link-hover-border-color: var(--bs-secondary-bg) var(--bs-secondary-bg) var(--bs-border-color);
+    --bs-nav-tabs-link-active-color: var(--bs-emphasis-color);
+    --bs-nav-tabs-link-active-bg: var(--bs-body-bg);
+    --bs-nav-tabs-link-active-border-color: var(--bs-border-color) var(--bs-border-color) var(--bs-body-bg);
+    border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
+}
+.nav-tabs .nav-link {
+    margin-bottom: calc(-1 * var(--bs-nav-tabs-border-width));
+    background: none;
+    border: var(--bs-nav-tabs-border-width) solid transparent;
+    border-top-left-radius: var(--bs-nav-tabs-border-radius);
+    border-top-right-radius: var(--bs-nav-tabs-border-radius);
+}
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    isolation: isolate;
+    border-color: var(--bs-nav-tabs-link-hover-border-color);
+}
+.nav-tabs .nav-link.disabled,
+.nav-tabs .nav-link:disabled {
+    color: var(--bs-nav-link-disabled-color);
+    background-color: transparent;
+    border-color: transparent;
+}
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: var(--bs-nav-tabs-link-active-color);
+    background-color: var(--bs-nav-tabs-link-active-bg);
+    border-color: var(--bs-nav-tabs-link-active-border-color);
+}
+.nav-tabs .dropdown-menu {
+    margin-top: calc(-1 * var(--bs-nav-tabs-border-width));
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.tab-content > .tab-pane {
+    display: none;
+}
+.tab-content > .active {
+    display: block;
+}
+
+.MovieTabNav,
+button.nav-link,
+body {
+    background-color: #0f1416 !important;
+}
+.nav-item {
+    font-size: 16px;
+    font-weight: 500;
+    height: 50px;
+    padding: 0 10px;
+}
+.nav-item .nav-link {
+    box-sizing: content-box;
+    color: #797777;
+    padding: 0;
+    height: 100%;
+}
+.active-primary {
+    border-bottom: 3px solid #b5e745 !important;
+    color: #b5e745 !important;
+}
+
+#myTabContent {
+    background-color: #1f282d;
+    color: #fff;
+    padding: 16px;
+    margin-top: 3px;
+}
+.info-list {
+    list-style: none;
+    padding-left: 10px !important;
+    margin-bottom: 0;
+}
+.info-wrapper li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.info-wrapper i {
+    font-size: 10px;
+    color: #b5e745;
+    margin-right: 10px;
+}
+.info-wrapper span {
+    margin: 0;
+    font-size: 12px;
+    line-height: 12px;
+    color: #f2f2f2;
+    font-weight: 600;
+}
+.info-wrapper span.text-primary1 {
+    color: #b5e745;
+}
+.info-wrapper strong {
+    font-size: 12px;
+    font-weight: 700;
+    margin-right: 6px;
+    white-space: nowrap;
+}
+.info-wrapper .newEpisode {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+.info-wrapper .newEpisode > div {
+    background-color: #4c4c4c;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+.info-wrapper .qualityHD {
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #e62117;
+    padding: 0px 7px;
+    border-radius: 100px;
+}
+.info-wrapper .rating {
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #e62117;
+    padding: 3px 10px;
+    border-radius: 3px;
+}
+
+#character-tab {
+    padding: 10px 0;
+}
+.character-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 26px;
+}
+.character-item {
+    text-align: center;
+    cursor: pointer;
+    width: 107px;
+    height: 104px;
+}
+.character-item:hover .character-img {
+    scale: 1.15;
+}
+.character-img {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 100rem;
+    background-color: #13181b;
+    margin: 0 auto;
+    scale: 1;
+    transition: all 0.2s ease;
+}
+.character-img i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+.character-name {
+    margin-top: 10px;
+    font-weight: 600;
+}

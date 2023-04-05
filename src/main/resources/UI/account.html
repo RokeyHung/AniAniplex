@@ -1,0 +1,74 @@
+<div class="account">
+    <div class="account-wrapper">
+        <div id="display1">
+            <form action="login" class="form-login">
+                <header>ĐĂNG NHẬP!</header>
+                <div class="field-input">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="username" maxlength="40" minlength="6" placeholder="Tài khoản" />
+                </div>
+                <div class="field-input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="password" maxlength="30" minlength="6" placeholder="Mật khẩu" />
+                </div>
+                <div class="account-btn"><button>ĐĂNG NHẬP</button></div>
+            </form>
+            <div class="HadAccount">
+                <div class="HadAccount-wrapper">
+                    <span><span>Bạn chưa có tài khoản?&nbsp;</span><span id="toggleDisplay1">Đăng ký</span>&nbsp;ngay </span>
+                </div>
+            </div>
+        </div>
+        <div id="display2" style="display: none">
+            <form action="register" class="form-register">
+                <header>ĐĂNG KÝ!</header>
+                <div class="field-input">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="username" maxlength="40" minlength="6" placeholder="Tài khoản" />
+                </div>
+                <div class="field-input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="password" maxlength="30" minlength="6" placeholder="Mật khẩu" />
+                </div>
+                <div class="field-input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="repassword" maxlength="30" minlength="6" placeholder="Nhập lại mật khẩu" />
+                </div>
+                <div class="field-input">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="text" name="email" placeholder="Email" />
+                </div>
+                <div class="account-btn"><button>ĐĂNG KÝ</button></div>
+            </form>
+            <div class="HadAccount">
+                <div class="HadAccount-wrapper">
+                    <span> <span> Đã có tài khoản?&nbsp;</span><span id="toggleDisplay2">Đăng nhập</span>&nbsp;ngay </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const toggleDisplay1 = document.getElementById('toggleDisplay1');
+        const toggleDisplay2 = document.getElementById('toggleDisplay2');
+        const display1 = document.getElementById('display1');
+        const display2 = document.getElementById('display2');
+        toggleDisplay1.addEventListener('click', function () {
+            if (display1.style.display === 'none') {
+                display1.style.display = 'block';
+                display2.style.display = 'none';
+            } else {
+                display1.style.display = 'none';
+                display2.style.display = 'block';
+            }
+        });
+        toggleDisplay2.addEventListener('click', function () {
+            if (display2.style.display === 'none') {
+                display2.style.display = 'block';
+                display1.style.display = 'none';
+            } else {
+                display2.style.display = 'none';
+                display1.style.display = 'block';
+            }
+        });
+    </script>
+</div>

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./assets/images/zyro-ico.ico" type="image/x-icon" />
+        <title>Anime Vietsub Online - AniAniplex</title>
+        <link rel="stylesheet" href="./assets/css/GridSystem.css" />
+        <link rel="stylesheet" href="./assets/css/base.css" />
+        <link rel="stylesheet" href="./assets/css/navbar.css" />
+        <link rel="stylesheet" href="./assets/css/container.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="./assets/javascript/main.js"></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="#" class="logo-link"><img src="./assets/images/Aniplex-Logo.wine.svg" class="logo-img" alt="logo" /></a>
+                </div>
+                <input class="d-none" type="radio" name="slider" id="menu-btn" />
+                <input class="d-none" type="radio" name="slider" id="close-btn" />
+                <ul class="nav-links">
+                    <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                    <li class="nav__item-desktop hideOnDesktop">
+                        <input class="d-none" type="checkbox" id="showDrop1" />
+                        <label for="showDrop1" class="d-flex align-items-center user-name-mobile cursor-pointer flex-nowrap">
+                            <div class="user-image">
+                                <img src="https://cdn.discordapp.com/attachments/1059014105777848341/1089228843673469049/pixel_1.jpg" alt="user_image" />
+                            </div>
+                            <span>Chào Kobayashi!</span>
+                            <i class="fa-solid fa-angle-down color-primary2"></i>
+                        </label>
+                        <ul class="drop-menu row mg-0 pt-10">
+                            <li class="m-4 w-100">
+                                <a href="#"><i class="fa-solid fa-user"></i>Thông tin tài khoản</a>
+                            </li>
+                            <li class="m-4 w-100">
+                                <a href="#"><i class="fa-solid fa-film"></i>Hộp phim</a>
+                            </li>
+                            <li class="m-4 w-100">
+                                <a href="#"><i class="fa-solid fa-clock-rotate-left"></i>Lịch sử</a>
+                            </li>
+                            <li class="m-4 w-100">
+                                <a href="#"><i class="fa-solid fa-right-from-bracket"></i>Thoát</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">TRANG CHỦ</a></li>
+                    <li class="nav__item-desktop">
+                        <a href="#" class="desktop-item">DẠNG ANIME <i class="fa-solid fa-angle-down iconNavDesktop"></i></a>
+                        <input class="d-none" type="checkbox" id="showDrop2" />
+                        <label for="showDrop2" class="mobile-item">DẠNG ANIME <i class="fa-solid fa-angle-down iconNavMobile"></i></label>
+                        <ul class="drop-menu row mg-0">
+                            <li class="m-4 w-100"><a href="#">TV Series</a></li>
+                            <li class="m-4 w-100"><a href="#">Movie/OVA</a></li>
+                            <li class="m-4 w-100"><a href="#">HH Trung Quóc</a></li>
+                            <li class="m-4 w-100"><a href="#">Anime sắp chiếu</a></li>
+                            <li class="m-4 w-100"><a href="#">Anime Đang Chiếu</a></li>
+                            <li class="m-4 w-100"><a href="#">Anime trọn bộ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item-desktop">
+                        <a href="#" class="desktop-item">INFORMATION <i class="fa-solid fa-angle-down iconNavDesktop"></i></a>
+                        <input class="d-none" type="checkbox" id="showMega" />
+                        <label for="showMega" class="mobile-item">INFORMATION <i class="fa-solid fa-angle-down iconNavMobile"></i></label>
+                        <div class="mega-box">
+                            <div class="content">
+                                <div class="row d-block">
+                                    <img src="./assets/images/pixel.jpg" alt="" />
+                                </div>
+                                <div class="row d-block">
+                                    <header>Design Services</header>
+                                    <ul class="mega-links">
+                                        <li><a href="#">Graphics</a></li>
+                                        <li><a href="#">Vectors</a></li>
+                                        <li><a href="#">Business cards</a></li>
+                                        <li><a href="#">Custom logo</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row d-block">
+                                    <header>Email Services</header>
+                                    <ul class="mega-links">
+                                        <li><a href="#">Personal Email</a></li>
+                                        <li><a href="#">Business Email</a></li>
+                                        <li><a href="#">Mobile Email</a></li>
+                                        <li><a href="#">Web Marketing</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row d-block">
+                                    <header>Security services</header>
+                                    <ul class="mega-links">
+                                        <li><a href="#">Site Seal</a></li>
+                                        <li><a href="#">VPS Hosting</a></li>
+                                        <li><a href="#">Privacy Seal</a></li>
+                                        <li><a href="#">Website design</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-right d-flex align-items-center">
+                        <div class="nav-search desktop-item">
+                            <div class="nav-search-wrapper d-flex align-items-center">
+                                <div class="nav-search-icon">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <div class="nav-search-input">
+                                    <input type="text" placeholder="Tìm: tên tiếng Nhật, Anh, Việt" />
+                                </div>
+                                <div class="nav-search-icon nav-search-close">
+                                    <i class="fa-solid fa-xmark cursor-pointer"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="nav__account">
+                            <div class="nav__account-btn">
+                                <a href="#">Đăng nhập</a>
+                            </div>
+                        </div> -->
+                    </li>
+                    <div class="dropdown hideOnMobile">
+                        <label for="checkshow" class="dropdown-title">
+                            <div class="user-image">
+                                <img src="https://cdn.discordapp.com/attachments/1059014105777848341/1089228843673469049/pixel_1.jpg" alt="user_image" />
+                            </div>
+                            <div class="nav-user-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </label>
+                        <input type="checkbox" id="checkshow" />
+                        <ul class="menu">
+                            <li class="user-name">Chào Kobayashi!</li>
+                            <li>
+                                <a href="#"><i class="fa-solid fa-user"></i>Thông tin tài khoản</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-solid fa-film"></i>Hộp phim</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-solid fa-clock-rotate-left"></i>Lịch sử</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-solid fa-right-from-bracket"></i>Thoát</a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+                <div class="nav-search hideOnDesktop">
+                    <div class="nav-search-wrapper d-flex align-items-center">
+                        <div class="nav-search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="nav-search-input">
+                            <input type="text" placeholder="Tìm: tên tiếng Nhật, Anh, Việt" />
+                        </div>
+                        <div class="nav-search-icon nav-search-close">
+                            <i class="fa-solid fa-xmark cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+                <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+            </div>
+        </nav>
+        <div class="space"></div>
+        <div class="container">
+            <div class="container-wrapper">
+                <div class="container-viewlist row mg-0 p-0">
+                    <article class="l-9 m-12 s-12 xs-12">
+                        <div class="container-listAni w-100">
+                            <div class="listAni-wrapper w-100">
+                                <div class="listAni-body w-100">
+                                    <div class="row mx-6 p-0">
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="xs-6 s-4 sm-3 m-20 l-20">
+                                            <div class="listAni-item">
+                                                <div class="item-image">
+                                                    <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                    <div class="background-gradient">
+                                                        <div class="icon-play"><i class="fa-solid fa-play"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-name">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                                <div class="item-views">Lượt xem <span>331,360</span></div>
+                                                <div class="rate"><i class="fa-solid fa-star"></i> 9.6</div>
+                                                <div class="episode">
+                                                    <div>Tập</div>
+                                                    <div>11</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <aside class="l-3 m-12 s-12 xs-12">
+                        <div class="cart">
+                            <div class="cart-title">Hôm nay xem gì?</div>
+                            <div class="line-cart"><div class="line-primary"></div></div>
+                            <div class="cart-body">Nếu bạn buồn phiền không biết xem gì hôm nay. Hãy để chúng tôi chọn cho bạn</div>
+                            <button class="btn btn-primary mt-10"><i class="fa-solid fa-play"></i>Xem Anime Ngẫu Nhiên</button>
+                        </div>
+                        <div class="cart">
+                            <div class="cart-title">ANIME MỚI CẬP NHẬT</div>
+                            <div class="line-cart"><div class="line-primary"></div></div>
+                            <div class="cart-body user-select-none">
+                                <ul class="cart-group">
+                                    <li class="cart-group-item">
+                                        <span>Phòng Ngự Toàn Khai</span>
+                                        <span>Tập 28</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>Xích Diễm Cẩm Y Vệ</span>
+                                        <span>Tập 15</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>Tinh Hà Chí Tôn Mùa 2</span>
+                                        <span>Tập 99</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>Yêu Thần Ký</span>
+                                        <span>Tập 297</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>Thôn Phệ Tinh Không Phần 2</span>
+                                        <span>Tập 55</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>Nhất Niệm Vĩnh Hằng Phần 2</span>
+                                        <span>Tập 38</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>Ore dake Level Up na Ken</span>
+                                        <span>Tập PV</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>Ẩm Thực Dã Ngoại Tại Dị Giới Với Kỹ Năng Không Tưởng</span>
+                                        <span>Tập 11</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>High Card</span>
+                                        <span>Tập 11</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>Chàng Băng Giá Và Nàng Lạnh Lùng</span>
+                                        <span>Full</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <a href="">Xem thêm...</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="space"></div>
+        <footer id="footer">
+            <img src="./assets/images/Aniplex-Logo.wine.svg" alt="" />
+            <div class="footer-item">
+                <a href="">XEM PHIM</a>
+                <a href="">YÊU CẦU ANIME</a>
+                <a href="">CHAT ANIME/DISCORD</a>
+                <a href="">THUẬT NGỮ</a>
+                <a href="">GROUP THẢO LUẬT</a>
+            </div>
+            <div class="footer-social">
+                <a href=""><img src="./assets/images/icon/Facebook-f_Logo-Blue-Logo.wine.svg" alt="" /></a>
+                <a href=""><img src="./assets/images/icon/Instagram-Logo.wine.svg" alt="" /></a>
+                <a href=""><img src="./assets/images/icon/Twitter-Logo.wine.svg" alt="" /></a>
+                <a href=""><img src="./assets/images/icon/YouTube-Icon-Full-Color-Logo.wine.svg" alt="" /></a>
+            </div>
+        </footer>
+        <div class="space"></div>
+        <div class="copyright">© Copyright 2023 AniAniplex. All rights reserved.</div>
+        <div class="space"></div>
+        <div class="space"></div>
+        <div class="space"></div>
+    </body>
+</html>

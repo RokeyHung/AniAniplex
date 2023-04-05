@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="AniPersistence" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:sqlserver://localhost:1433;databaseName=AniAniplex;encrypt=true;trustServerCertificate=true;"/>
+            <property name="javax.persistence.jdbc.user" value="Celestial"/>
+            <property name="javax.persistence.jdbc.password" value="123"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServer2016Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="spring.jpa.properties.hibernate.legacy_limit_handler" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>

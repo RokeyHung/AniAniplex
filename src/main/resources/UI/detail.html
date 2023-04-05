@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./assets/images/zyro-ico.ico" type="image/x-icon" />
+        <title>Anime Vietsub Online - AniAniplex</title>
+        <link rel="stylesheet" href="./assets/css/GridSystem.css" />
+        <link rel="stylesheet" href="./assets/css/base.css" />
+        <link rel="stylesheet" href="./assets/css/navbar.css" />
+        <link rel="stylesheet" href="./assets/css/container.css" />
+        <link rel="stylesheet" href="./assets/css/detail.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="./index.html" class="logo-link"><img src="./assets/images/Aniplex-Logo.wine.svg" class="logo-img" alt="logo" /></a>
+                </div>
+                <input class="d-none" type="radio" name="slider" id="menu-btn" />
+                <input class="d-none" type="radio" name="slider" id="close-btn" />
+                <ul class="nav-links">
+                    <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                    <li class="nav__item-desktop hideOnDesktop">
+                        <input class="d-none" type="checkbox" id="showDrop1" />
+                        <label for="showDrop1" class="d-flex align-items-center user-name-mobile cursor-pointer flex-nowrap">
+                            <div class="user-image">
+                                <img src="https://cdn.discordapp.com/attachments/1059014105777848341/1089228843673469049/pixel_1.jpg" alt="user_image" />
+                            </div>
+                            <span>Chào Kobayashi!</span>
+                            <i class="fa-solid fa-angle-down color-primary2"></i>
+                        </label>
+                        <ul class="drop-menu row mg-0 pt-10">
+                            <li class="m-4 w-100">
+                                <a href="./accountCenter.html"><i class="fa-solid fa-user"></i>Thông tin tài khoản</a>
+                            </li>
+                            <li class="m-4 w-100">
+                                <a href="favorites.html"><i class="fa-solid fa-film"></i>Hộp phim</a>
+                            </li>
+                            <li class="m-4 w-100">
+                                <a href="#"><i class="fa-solid fa-clock-rotate-left"></i>Lịch sử</a>
+                            </li>
+                            <li class="m-4 w-100">
+                                <a href="#"><i class="fa-solid fa-right-from-bracket"></i>Thoát</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">TRANG CHỦ</a></li>
+                    <li class="nav__item-desktop">
+                        <a href="#" class="desktop-item">DẠNG ANIME <i class="fa-solid fa-angle-down iconNavDesktop"></i></a>
+                        <input class="d-none" type="checkbox" id="showDrop2" />
+                        <label for="showDrop2" class="mobile-item">DẠNG ANIME <i class="fa-solid fa-angle-down iconNavMobile"></i></label>
+                        <ul class="drop-menu row mg-0">
+                            <li class="m-4 w-100"><a href="#">TV Series</a></li>
+                            <li class="m-4 w-100"><a href="#">Movie/OVA</a></li>
+                            <li class="m-4 w-100"><a href="#">HH Trung Quóc</a></li>
+                            <li class="m-4 w-100"><a href="#">Anime sắp chiếu</a></li>
+                            <li class="m-4 w-100"><a href="#">Anime Đang Chiếu</a></li>
+                            <li class="m-4 w-100"><a href="#">Anime trọn bộ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item-desktop">
+                        <a href="#" class="desktop-item">INFORMATION <i class="fa-solid fa-angle-down iconNavDesktop"></i></a>
+                        <input class="d-none" type="checkbox" id="showMega" />
+                        <label for="showMega" class="mobile-item">INFORMATION <i class="fa-solid fa-angle-down iconNavMobile"></i></label>
+                        <div class="mega-box">
+                            <div class="content">
+                                <div class="row d-block">
+                                    <img src="./assets/images/pixel.jpg" alt="" />
+                                </div>
+                                <div class="row d-block">
+                                    <header>Design Services</header>
+                                    <ul class="mega-links">
+                                        <li><a href="#">Graphics</a></li>
+                                        <li><a href="#">Vectors</a></li>
+                                        <li><a href="#">Business cards</a></li>
+                                        <li><a href="#">Custom logo</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row d-block">
+                                    <header>Email Services</header>
+                                    <ul class="mega-links">
+                                        <li><a href="#">Personal Email</a></li>
+                                        <li><a href="#">Business Email</a></li>
+                                        <li><a href="#">Mobile Email</a></li>
+                                        <li><a href="#">Web Marketing</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row d-block">
+                                    <header>Security services</header>
+                                    <ul class="mega-links">
+                                        <li><a href="#">Site Seal</a></li>
+                                        <li><a href="#">VPS Hosting</a></li>
+                                        <li><a href="#">Privacy Seal</a></li>
+                                        <li><a href="#">Website design</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-right d-flex align-items-center">
+                        <div class="nav-search desktop-item">
+                            <div class="nav-search-wrapper d-flex align-items-center">
+                                <div class="nav-search-icon">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <div class="nav-search-input">
+                                    <input type="text" placeholder="Tìm: tên tiếng Nhật, Anh, Việt" />
+                                </div>
+                                <div class="nav-search-icon nav-search-close">
+                                    <i class="fa-solid fa-xmark cursor-pointer p-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="nav__account">
+                            <div class="nav__account-btn">
+                                <a href="#">Đăng nhập</a>
+                            </div>
+                        </div> -->
+                    </li>
+                    <div class="dropdown hideOnMobile">
+                        <label for="checkshow" class="dropdown-title">
+                            <div class="user-image">
+                                <img src="https://cdn.discordapp.com/attachments/1059014105777848341/1089228843673469049/pixel_1.jpg" alt="user_image" />
+                            </div>
+                            <div class="nav-user-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </label>
+                        <input type="checkbox" id="checkshow" />
+                        <ul class="menu">
+                            <li class="user-name">Chào Kobayashi!</li>
+                            <li>
+                                <a href="./accountCenter.html"><i class="fa-solid fa-user"></i>Thông tin tài khoản</a>
+                            </li>
+                            <li>
+                                <a href="favorites.html"><i class="fa-solid fa-film"></i>Hộp phim</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-solid fa-clock-rotate-left"></i>Lịch sử</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-solid fa-right-from-bracket"></i>Thoát</a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+                <div class="nav-search hideOnDesktop">
+                    <div class="nav-search-wrapper d-flex align-items-center">
+                        <div class="nav-search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="nav-search-input">
+                            <input type="text" placeholder="Tìm: tên tiếng Nhật, Anh, Việt" />
+                        </div>
+                        <div class="nav-search-icon nav-search-close">
+                            <i class="fa-solid fa-xmark cursor-pointer p-4"></i>
+                        </div>
+                    </div>
+                </div>
+                <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+            </div>
+        </nav>
+        <div class="space"></div>
+        <div class="container">
+            <div class="container-wrapper">
+                <div class="container-notify">
+                    <div class="teamspeak"><i class="fa-brands fa-teamspeak"></i></div>
+                    <div class="notify-title">
+                        <i class="fa-solid fa-circle"></i> Hiện tại đang bị đứt cáp quang nên xảy ra tình trạng lag, các bạn dùng 1.1.1.1 hoặc 4G để xem đỡ lag.
+                    </div>
+                    <div class="notify-title">
+                        <i class="fa-solid fa-circle"></i> Mời bạn tham gia Group&nbsp;<a href="" class="link">tại đây!</a>&nbsp;hoặc tham gia Discord<a href="" class="link"
+                            >&nbsp;tại đây!&nbsp;</a
+                        >để ủng hộ&nbsp;<a href="" class="link">AniAniplex</a>
+                    </div>
+                    <div class="notify-title"><i class="fa-solid fa-circle"></i> Do thiếu hút kinh phí nên quảng cáo có thể gây khó chịu, rất mong các bạn thông cảm!</div>
+                </div>
+                <div class="container-viewlist row mg-0 p-0">
+                    <article class="l-9 m-12 s-12 xs-12">
+                        <div class="anime__container">
+                            <div class="anime__container-wrapper">
+                                <div class="anime__content" style="--background-img: url('https://cdn.animevietsub.in/data/big_banner/2022/12/08/animevsub-Ob2uhpiLRh.png')">
+                                    <div class="anime__content-introduce">
+                                        <div class="anime__content-detail">
+                                            <div class="anime__content-title">Cuộc Sống Nông Dân Ở Thế Giới Khác</div>
+                                            <div class="anime__content-nameJP">Isekai Nonbiri Nouka, Farming Life in Another World</div>
+                                            <div class="anime__content-img">
+                                                <img src="http://cdn.animevietsub.in/data/poster/2023/01/06/animevsub-cDQCDt5v9X.jpg" alt="" />
+                                                <div class="btn-play"><i class="fa-solid fa-play"></i></div>
+                                                <div class="blur-opacity"></div>
+                                                <div class="contend-img-following"><i class="fa-regular fa-bookmark"></i>&ensp;Theo dõi</div>
+                                                <div class="xemphim">XEM PHIM</div>
+                                            </div>
+                                            <div class="anime__content-description">
+                                                Qua đời vì bệnh tật ở tuổi 39, Machio Hiraku được trao cơ hội đến một thế giới khác. Khi được Thượng đế hỏi ông mong muốn điều gì,
+                                                ông chọn có một cơ thể khỏe mạnh, điều ước thứ hai, ông chọn cuộc sống bình yên, điều ước thứ ba là có thể biết tiếng địa phương và
+                                                điều ước cuối cùng là có thể trở thành một nông dân.
+                                            </div>
+                                        </div>
+                                        <div class="anime__content-evaluate">
+                                            <div class="evaluate-left">
+                                                <div class="evaluate-percent"><span>100%</span></div>
+                                                <div class="evaluate-rate">
+                                                    <div class="evaluate-star">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <div class="evaluate-user">(Đánh giá 9.6/10 từ 497 thành viên)</div>
+                                                </div>
+                                            </div>
+                                            <div class="evaluate-right">
+                                                <div class="evaluate-episode"><i class="fa-regular fa-clock"></i>&nbsp;11/12</div>
+                                                <div class="evaluate-year"><i class="fa-regular fa-calendar-days"></i>&nbsp;2023</div>
+                                                <div class="evaluate-views"><i class="fa-solid fa-eye"></i>&nbsp;2,252,924 Lượt Xem</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="MovieTabNav" style="margin-top: 4px">
+                                <div class="MovieTabNav">
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button
+                                                class="nav-link active cursor-pointer active-primary"
+                                                data-bs-toggle="tab"
+                                                data-bs-target="#info-tab"
+                                                type="button"
+                                                role="tab"
+                                                aria-controls="info-tab"
+                                                aria-selected="true"
+                                            >
+                                                <i class="fa-solid fa-file-lines"></i>&nbsp;&nbsp;Thông tin phim
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button
+                                                class="nav-link cursor-pointer"
+                                                data-bs-toggle="tab"
+                                                data-bs-target="#character-tab"
+                                                type="button"
+                                                role="tab"
+                                                aria-controls="character-tab"
+                                                aria-selected="false"
+                                            >
+                                                <i class="fa-solid fa-check-to-slot"></i>&nbsp;&nbsp;Nhân vật
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button
+                                                class="nav-link cursor-pointer"
+                                                data-bs-toggle="tab"
+                                                data-bs-target="#trailer-tab"
+                                                type="button"
+                                                role="tab"
+                                                aria-controls="trailer-tab"
+                                                aria-selected="false"
+                                            >
+                                                <i class="fa-solid fa-video"></i>&nbsp;&nbsp;Trailer
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button
+                                                class="nav-link cursor-pointer"
+                                                id="contact-tab"
+                                                data-bs-toggle="tab"
+                                                data-bs-target="#image-tab"
+                                                type="button"
+                                                role="tab"
+                                                aria-controls="image-tab"
+                                                aria-selected="false"
+                                            >
+                                                <i class="fa-solid fa-image"></i>&nbsp;&nbsp;Hình ảnh
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade show active" id="info-tab" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                            <div class="info-wrapper d-flex align-items-start row mg-0">
+                                                <div class="c-6 sm-max-12">
+                                                    <ul class="info-list">
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-dot"></i><strong>Tập mới:</strong>
+                                                            <div class="newEpisode">
+                                                                <div>12</div>
+                                                                <div>11</div>
+                                                                <div>10</div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-dot"></i><strong>Lịch chiếu:</strong>
+                                                            <span>Thứ Sáu vào lúc 21 giờ 45 phút hàng tuần</span>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-dot"></i><strong>Trạng thái:</strong><span>Phim đang chiếu/Cập Nhật Tập 11 VietSub</span>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-dot"></i><strong>Thể loại:</strong
+                                                            ><span class="text-primary1">Anime bộ, Seinen, Romance, Slice of Life, Harem, Fantasy, Comedy, Adventure</span>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-dot"></i><strong>Đạo diễn:</strong><span class="text-primary1">Kuraya Ryouichi</span>
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-dot"></i><strong>Quốc gia:</strong><span class="text-primary1">Nhật Bản</span></li>
+                                                        <li><i class="fa-regular fa-circle-dot"></i><strong>Số người theo dõi:</strong><span>4,460</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="c-6 sm-max-12">
+                                                    <ul class="info-list">
+                                                        <li><i class="fa-regular fa-circle-dot"></i><strong>Thời lượng:</strong><span>12/12</span></li>
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-dot"></i><strong>Chất lượng:</strong>
+                                                            <div class="qualityHD">HD</div>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-dot"></i><strong>Rating:</strong>
+                                                            <div class="rating">PG-13 - Teens 13 tuổi trở lên</div>
+                                                        </li>
+                                                        <li><i class="fa-regular fa-circle-dot"></i><strong>Ngôn ngữ:</strong><span>VietSub</span></li>
+                                                        <li><i class="fa-regular fa-circle-dot"></i><strong>Studio:</strong><span>Zero-G</span></li>
+                                                        <li><i class="fa-regular fa-circle-dot"></i><strong>Season:</strong><span class="text-primary1">Mùa Đông - 2023</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="character-tab" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                                            <div class="character-list">
+                                                <div class="character-item">
+                                                    <div class="character-wrapper-img">
+                                                        <div class="character-img"><i class="fa-solid fa-user"></i></div>
+                                                    </div>
+                                                    <div class="character-name">Machio Hiraku</div>
+                                                </div>
+                                                <div class="character-item">
+                                                    <div class="character-wrapper-img">
+                                                        <div class="character-img"><i class="fa-solid fa-user"></i></div>
+                                                    </div>
+                                                    <div class="character-name">Ru Rurushi</div>
+                                                </div>
+                                                <div class="character-item">
+                                                    <div class="character-wrapper-img">
+                                                        <div class="character-img"><i class="fa-solid fa-user"></i></div>
+                                                    </div>
+                                                    <div class="character-name">Tia</div>
+                                                </div>
+                                                <div class="character-item">
+                                                    <div class="character-wrapper-img">
+                                                        <div class="character-img"><i class="fa-solid fa-user"></i></div>
+                                                    </div>
+                                                    <div class="character-name">Ria</div>
+                                                </div>
+                                                <div class="character-item">
+                                                    <div class="character-wrapper-img">
+                                                        <div class="character-img"><i class="fa-solid fa-user"></i></div>
+                                                    </div>
+                                                    <div class="character-name">Ann</div>
+                                                </div>
+                                                <div class="character-item">
+                                                    <div class="character-wrapper-img">
+                                                        <div class="character-img"><i class="fa-solid fa-user"></i></div>
+                                                    </div>
+                                                    <div class="character-name">Flora</div>
+                                                </div>
+                                                <div class="character-item">
+                                                    <div class="character-wrapper-img">
+                                                        <div class="character-img"><i class="fa-solid fa-user"></i></div>
+                                                    </div>
+                                                    <div class="character-name">Senna</div>
+                                                </div>
+                                                <div class="character-item">
+                                                    <div class="character-wrapper-img">
+                                                        <div class="character-img"><i class="fa-solid fa-user"></i></div>
+                                                    </div>
+                                                    <div class="character-name">Rasutisumoon</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="trailer-tab" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                                            <iframe
+                                                width="100%"
+                                                height="500px"
+                                                src="https://www.youtube.com/embed/iwxPf8SEmEU?start=1"
+                                                title="YouTube video player"
+                                                frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowfullscreen
+                                            ></iframe>
+                                        </div>
+                                        <div class="tab-pane fade w-100" id="image-tab" role="tabpanel" aria-labelledby="image-tab" tabindex="0">
+                                            <img
+                                                class="object-fit-contain w-inherit h-inherit"
+                                                src="https://cdn.animevietsub.in/data/big_banner/2022/12/08/animevsub-Ob2uhpiLRh.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const items = document.querySelectorAll('#myTab button');
+                                    items.forEach((item) => {
+                                        item.addEventListener('click', () => {
+                                            items.forEach((item) => {
+                                                item.classList.remove('active-primary');
+                                            });
+                                            item.classList.add('active-primary');
+                                        });
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </article>
+                    <aside class="l-3 m-12 s-12 xs-12">
+                        <div class="cart">
+                            <div class="cart-title">Hôm nay xem gì?</div>
+                            <div class="line-cart"><div class="line-primary"></div></div>
+                            <div class="cart-body">Nếu bạn buồn phiền không biết xem gì hôm nay. Hãy để chúng tôi chọn cho bạn</div>
+                            <button class="btn btn-primary mt-10"><i class="fa-solid fa-play"></i>Xem Anime Ngẫu Nhiên</button>
+                        </div>
+                        <div class="cart">
+                            <div class="cart-title">ANIME MỚI CẬP NHẬT</div>
+                            <div class="line-cart"><div class="line-primary"></div></div>
+                            <div class="cart-body">
+                                <ul class="cart-group">
+                                    <li class="cart-group-item">
+                                        <span>Phòng Ngự Toàn Khai</span>
+                                        <span>Tập 28</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>Xích Diễm Cẩm Y Vệ</span>
+                                        <span>Tập 15</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>Tinh Hà Chí Tôn Mùa 2</span>
+                                        <span>Tập 99</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>Yêu Thần Ký</span>
+                                        <span>Tập 297</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>Thôn Phệ Tinh Không Phần 2</span>
+                                        <span>Tập 55</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>Nhất Niệm Vĩnh Hằng Phần 2</span>
+                                        <span>Tập 38</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>Ore dake Level Up na Ken</span>
+                                        <span>Tập PV</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>Ẩm Thực Dã Ngoại Tại Dị Giới Với Kỹ Năng Không Tưởng</span>
+                                        <span>Tập 11</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>High Card</span>
+                                        <span>Tập 11</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <span>Chàng Băng Giá Và Nàng Lạnh Lùng</span>
+                                        <span>Full</span>
+                                    </li>
+                                    <li class="cart-group-item">
+                                        <a href="">Xem thêm...</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="space"></div>
+        <footer id="footer">
+            <img src="./assets/images/Aniplex-Logo.wine.svg" alt="" />
+            <div class="footer-item">
+                <a href="">XEM PHIM</a>
+                <a href="">YÊU CẦU ANIME</a>
+                <a href="">CHAT ANIME/DISCORD</a>
+                <a href="">THUẬT NGỮ</a>
+                <a href="">GROUP THẢO LUẬT</a>
+            </div>
+            <div class="footer-social">
+                <a href=""><img src="./assets/images/icon/Facebook-f_Logo-Blue-Logo.wine.svg" alt="" /></a>
+                <a href=""><img src="./assets/images/icon/Instagram-Logo.wine.svg" alt="" /></a>
+                <a href=""><img src="./assets/images/icon/Twitter-Logo.wine.svg" alt="" /></a>
+                <a href=""><img src="./assets/images/icon/YouTube-Icon-Full-Color-Logo.wine.svg" alt="" /></a>
+            </div>
+        </footer>
+        <div class="space"></div>
+        <div class="copyright">© Copyright 2023 AniAniplex. All rights reserved.</div>
+        <div class="space"></div>
+        <div class="space"></div>
+        <div class="space"></div>
+    </body>
+</html>

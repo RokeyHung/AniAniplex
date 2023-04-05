@@ -1,0 +1,67 @@
+.account {
+    background-color: var(--background-app);
+    width: 100%;
+}
+.account header {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.account-wrapper {
+    padding: 30px;
+}
+.field-input {
+    display: flex;
+    align-items: center;
+    max-width: 450px;
+    border-bottom: 1px solid #514e4e;
+    margin: 0 auto;
+    padding: 8px 0;
+}
+.field-input i {
+    color: var(--text-color-body);
+    font-size: 1.4rem;
+}
+.field-input input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-color);
+    flex: 1;
+    padding: 6px 12px;
+    caret-color: var(--background-color-button);
+}
+.account-btn {
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+.account button {
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    background-color: #f3cb2b;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.HadAccount {
+    font-size: 1.4rem;
+    width: 100%;
+}
+.HadAccount-wrapper {
+    max-width: 450px;
+    margin: 0 auto;
+}
+.HadAccount #toggleDisplay1,
+.HadAccount #toggleDisplay2,
+.HadAccount #toggleDisplay3,
+.HadAccount #toggleDisplay4 {
+    text-decoration: underline;
+    color: var(--background-color-button);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
