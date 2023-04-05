@@ -3,9 +3,10 @@ package entity;
 import javax.persistence.*;
 
 import java.sql.Date;
+import java.util.List;
 
 @Entity
-@Table(name = "MOVIES", schema = "dbo", catalog = "AniAniplex")
+@Table(name = "MOVIES")
 public class MoviesEntity {
     @Id
     @Column(name = "movie_id")
@@ -59,6 +60,17 @@ public class MoviesEntity {
 
     @Column(name = "movie_year")
     private Date movieYear;
+
+    @OneToMany(mappedBy = "movies")
+    private List<FavoritesEntity> favoritesList;
+
+    public List<FavoritesEntity> getFavoritesList() {
+        return favoritesList;
+    }
+
+    public void setFavoritesList(List<FavoritesEntity> favoritesList) {
+        this.favoritesList = favoritesList;
+    }
 
     public MoviesEntity() {
     }
@@ -217,5 +229,11 @@ public class MoviesEntity {
 
     public void setMovieYear(Date movieYear) {
         this.movieYear = movieYear;
+    }
+
+    @Override
+    public String toString() {
+        return "MoviesEntity{" +
+                "movieId=" + movieId ;
     }
 }

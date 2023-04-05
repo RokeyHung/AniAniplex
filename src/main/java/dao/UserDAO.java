@@ -30,7 +30,7 @@ public class UserDAO {
         return entityManager.find(UsersEntity.class, userId);
     }
 
-    public UsersEntity findUserByJPQL(String username) {
+    public static UsersEntity findUserByJPQL(String username) {
         String jpql = "SELECT u FROM UsersEntity u WHERE u.userAccount = :username";
         TypedQuery<UsersEntity> query = entityManager.createQuery(jpql, UsersEntity.class);
         query.setParameter("username", username);

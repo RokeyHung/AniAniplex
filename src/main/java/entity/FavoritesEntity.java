@@ -12,32 +12,24 @@ public class FavoritesEntity {
     private int favoriteId;
 
     @Column(name = "favorite_date")
-    private Date favoriteDate;
+    private Date FavoriteDate;
 
-    @Column(name = "favorite_user")
-    private String favoriteUser;
+    @ManyToOne
+    @JoinColumn(name = "favorite_user")
+    private UsersEntity user;
 
-    @Column(name = "favorite_movie")
-    private String favoriteMovie;
+    @ManyToOne
+    @JoinColumn(name = "favorite_movie")
+    private MoviesEntity movies;
 
     public FavoritesEntity() {
     }
 
-    public FavoritesEntity(int favoriteId, Date favoriteDate, String favoriteUser, String favoriteMovie) {
+    public FavoritesEntity(int favoriteId, Date favoriteDate, UsersEntity user, MoviesEntity movies) {
         this.favoriteId = favoriteId;
-        this.favoriteDate = favoriteDate;
-        this.favoriteUser = favoriteUser;
-        this.favoriteMovie = favoriteMovie;
-    }
-
-    @Override
-    public String toString() {
-        return "FavoritesEntity{" +
-                "favoriteId=" + favoriteId +
-                ", favoriteDate=" + favoriteDate +
-                ", favoriteUser='" + favoriteUser + '\'' +
-                ", favoriteMovie='" + favoriteMovie + '\'' +
-                '}';
+        FavoriteDate = favoriteDate;
+        this.user = user;
+        this.movies = movies;
     }
 
     public int getFavoriteId() {
@@ -48,27 +40,33 @@ public class FavoritesEntity {
         this.favoriteId = favoriteId;
     }
 
+    public UsersEntity getUser() {
+        return user;
+    }
+
+    public void setUser(UsersEntity user) {
+        this.user = user;
+    }
+
+    public MoviesEntity getMovies() {
+        return movies;
+    }
+
+    public void setMovies(MoviesEntity movies) {
+        this.movies = movies;
+    }
+
     public Date getFavoriteDate() {
-        return favoriteDate;
+        return FavoriteDate;
     }
 
     public void setFavoriteDate(Date favoriteDate) {
-        this.favoriteDate = favoriteDate;
+        FavoriteDate = favoriteDate;
     }
 
-    public String getFavoriteUser() {
-        return favoriteUser;
-    }
-
-    public void setFavoriteUser(String favoriteUser) {
-        this.favoriteUser = favoriteUser;
-    }
-
-    public String getFavoriteMovie() {
-        return favoriteMovie;
-    }
-
-    public void setFavoriteMovie(String favoriteMovie) {
-        this.favoriteMovie = favoriteMovie;
+    @Override
+    public String toString() {
+        return "FavoritesEntity{" +
+                "favoriteId=" + favoriteId ;
     }
 }

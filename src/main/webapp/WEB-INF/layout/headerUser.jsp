@@ -4,7 +4,7 @@
 <nav class="navbar">
     <div class="wrapper">
         <div class="logo">
-            <a href="./index.html" class="logo-link">
+            <a href="/" class="logo-link">
                 <img src="https://res.cloudinary.com/dkyfbn6zy/image/upload/v1680599949/AniAniplex/image_assets/Aniplex-Logo.wine_afnlq9.svg"
                      class="logo-img" alt="logo"/>
             </a>

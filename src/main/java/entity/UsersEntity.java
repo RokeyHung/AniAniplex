@@ -3,6 +3,7 @@ package entity;
 import javax.persistence.*;
 
 import java.sql.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "USERS")
@@ -38,6 +39,9 @@ public class UsersEntity {
 
     @Column(name = "user_RegistraionDate")
     private Date userRegistraionDate;
+
+    @OneToMany(mappedBy = "user")
+    private List<FavoritesEntity> favoritesList;
 
     public UsersEntity() {
     }
@@ -138,16 +142,6 @@ public class UsersEntity {
     @Override
     public String toString() {
         return "UsersEntity{" +
-                "userId='" + userId + '\'' +
-                ", userName='" + userName + '\'' +
-                ", userAccount='" + userAccount + '\'' +
-                ", userPassword='" + userPassword + '\'' +
-                ", userEmail='" + userEmail + '\'' +
-                ", userImage='" + userImage + '\'' +
-                ", userGender=" + userGender +
-                ", userTitle='" + userTitle + '\'' +
-                ", userDescription='" + userDescription + '\'' +
-                ", userRegistraionDate=" + userRegistraionDate +
-                '}';
+                "userId='" + userId ;
     }
 }
