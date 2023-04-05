@@ -9,7 +9,8 @@ import java.sql.Date;
 public class MoviesEntity {
     @Id
     @Column(name = "movie_id")
-    private String movieId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int movieId;
 
     @Column(name = "movie_nameVN")
     private String movieNameVn;
@@ -62,7 +63,7 @@ public class MoviesEntity {
     public MoviesEntity() {
     }
 
-    public MoviesEntity(String movieId, String movieNameVn, String movieNameJp, String movieImage, String moviePoster, String movieDescription, String movieShowtimes, String movieStatus, String movieDirector, String movieCountry, Integer movieFollowers, Integer movieViews, Integer movieEpisode, String movieLanguage, String movieStudio, String movieSeason, Date movieYear) {
+    public MoviesEntity(int movieId, String movieNameVn, String movieNameJp, String movieImage, String moviePoster, String movieDescription, String movieShowtimes, String movieStatus, String movieDirector, String movieCountry, Integer movieFollowers, Integer movieViews, Integer movieEpisode, String movieLanguage, String movieStudio, String movieSeason, Date movieYear) {
         this.movieId = movieId;
         this.movieNameVn = movieNameVn;
         this.movieNameJp = movieNameJp;
@@ -82,11 +83,11 @@ public class MoviesEntity {
         this.movieYear = movieYear;
     }
 
-    public String getMovieId() {
+    public int getMovieId() {
         return movieId;
     }
 
-    public void setMovieId(String movieId) {
+    public void setMovieId(int movieId) {
         this.movieId = movieId;
     }
 

@@ -26,7 +26,7 @@ public class UserDAO {
         transaction.commit();
     }
 
-    public UsersEntity findUser(String userId) {
+    public UsersEntity findUser(int userId) {
         return entityManager.find(UsersEntity.class, userId);
     }
 

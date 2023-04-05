@@ -23,7 +23,7 @@ public class AnimeDetailServlet extends HttpServlet {
         String uri = req.getRequestURI();
         System.out.println(uri);
         if (uri.contains("phim")) {
-            String id = req.getParameter("movieId");
+            int id = Integer.parseInt(req.getParameter("movieId"));
             MoviesEntity movie = movieDAO.findMovie(id);
             req.setAttribute("movieItem", movie);
             req.getRequestDispatcher("anime-detail.jsp").forward(req, resp);

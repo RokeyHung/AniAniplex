@@ -9,7 +9,8 @@ import java.sql.Date;
 public class UsersEntity {
     @Id
     @Column(name = "user_id")
-    private String userId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int userId;
 
     @Column(name = "user_name")
     private String userName;
@@ -41,7 +42,7 @@ public class UsersEntity {
     public UsersEntity() {
     }
 
-    public UsersEntity(String userId, String userName, String userAccount, String userPassword, String userEmail, String userImage, Boolean userGender, String userTitle, String userDescription, Date userRegistraionDate) {
+    public UsersEntity(int userId, String userName, String userAccount, String userPassword, String userEmail, String userImage, Boolean userGender, String userTitle, String userDescription, Date userRegistraionDate) {
         this.userId = userId;
         this.userName = userName;
         this.userAccount = userAccount;
@@ -54,11 +55,11 @@ public class UsersEntity {
         this.userRegistraionDate = userRegistraionDate;
     }
 
-    public String getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 

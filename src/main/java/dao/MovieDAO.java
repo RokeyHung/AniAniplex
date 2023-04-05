@@ -27,7 +27,7 @@ public class MovieDAO {
         transaction.commit();
     }
 
-    public MoviesEntity findMovie(String movieId) {
+    public MoviesEntity findMovie(int movieId) {
         return entityManager.find(MoviesEntity.class, movieId);
     }
 
