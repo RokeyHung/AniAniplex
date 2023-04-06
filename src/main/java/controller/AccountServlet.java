@@ -10,6 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.util.Random;
 
 @WebServlet(name = "account", value = {
         "/account", "/login", "/register", "/forgot-password"})
@@ -29,13 +30,12 @@ public class AccountServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String uri = req.getRequestURI();
-        System.out.println(uri);
+        HttpSession session = req.getSession();
         if (uri.contains("login")) {
             String username = req.getParameter("dn-username").trim();
             String password = req.getParameter("dn-password");
             UsersEntity user = userDAO.findUserByJPQL(username);
             if (user.getUserAccount().equals(username) && user.getUserPassword().equals(password)) {
-                HttpSession session = req.getSession();
                 session.setAttribute("username", username);
                 session.setAttribute("password", password);
             }
@@ -47,6 +47,13 @@ public class AccountServlet extends HttpServlet {
             String email = req.getParameter("fg-email");
             String username = req.getParameter("fg-username");
             String password = req.getParameter("fg-password");
+
+            Random random = new Random();
+            int min = 100000;
+            int max = 999999;
+            int randomNumber = random.nextInt(max - min + 1) + min;
+            System.out.println(randomNumber);
+            session.setAttribute("verificationCode", randomNumber);
         }
         req.getRequestDispatcher("index.jsp").forward(req, resp);
     }

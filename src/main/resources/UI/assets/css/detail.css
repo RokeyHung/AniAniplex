@@ -362,7 +362,7 @@ body {
     color: #f2f2f2;
     font-weight: 600;
 }
-.info-wrapper span.text-primary1 {
+.info-wrapper .text-primary1 {
     color: #b5e745;
 }
 .info-wrapper strong {
@@ -377,10 +377,12 @@ body {
     gap: 6px;
     font-size: 14px;
 }
-.info-wrapper .newEpisode > div {
+.info-wrapper .newEpisode a {
     background-color: #4c4c4c;
     padding: 6px 10px;
+    min-width: 33px;
     cursor: pointer;
+    text-align: center;
 }
 .info-wrapper .qualityHD {
     font-size: 12px;
@@ -435,4 +437,7 @@ body {
 .character-name {
     margin-top: 10px;
     font-weight: 600;
+}
+li.d-block {
+    display: block !important;
 }

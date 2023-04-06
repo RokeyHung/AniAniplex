@@ -51,7 +51,7 @@ create table MOVIES(
 )
 
 create table MOVIE_EPISODE(
-    id int identity,
+    id int identity primary key,
     movie_id int,
     movie_episode_number int,
     movie_episode_link varchar(255),

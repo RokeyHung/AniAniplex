@@ -27,6 +27,7 @@ public class Start extends HttpServlet implements ServletContextListener {
     @Override
     public void contextDestroyed(ServletContextEvent event) {
         // Do nothing
+        movieDAO.closeEntityManager();
     }
 
     public String Normalizer(String text) {

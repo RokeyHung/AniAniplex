@@ -71,6 +71,11 @@ ${messageAccount}
                     <i class="fa-solid fa-lock"></i>
                     <input type="password" name="fg-password" maxlength="30" minlength="6" placeholder="Mật khẩu"/>
                 </div>
+                <div class="field-input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="text" name="verificationCode" maxlength="10" minlength="6" placeholder="Verification Code" />
+                    <button>GET CODE</button>
+                </div>
                 <div class="account-btn">
                     <button>QUÊN MẬT KHẨU</button>
                 </div>

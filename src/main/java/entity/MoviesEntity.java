@@ -64,13 +64,12 @@ public class MoviesEntity {
     @OneToMany(mappedBy = "movies")
     private List<FavoritesEntity> favoritesList;
 
-    public List<FavoritesEntity> getFavoritesList() {
-        return favoritesList;
-    }
+    @OneToMany(mappedBy = "movie")
+    private List<CategoryEntity> categoryList;
 
-    public void setFavoritesList(List<FavoritesEntity> favoritesList) {
-        this.favoritesList = favoritesList;
-    }
+    @OneToMany(mappedBy = "movie")
+    private List<MovieEpisodeEntity> episodes;
+
 
     public MoviesEntity() {
     }
@@ -234,6 +233,30 @@ public class MoviesEntity {
     @Override
     public String toString() {
         return "MoviesEntity{" +
-                "movieId=" + movieId ;
+                "movieId=" + movieId;
+    }
+
+    public List<FavoritesEntity> getFavoritesList() {
+        return favoritesList;
+    }
+
+    public void setFavoritesList(List<FavoritesEntity> favoritesList) {
+        this.favoritesList = favoritesList;
+    }
+
+    public List<CategoryEntity> getCategoryList() {
+        return categoryList;
+    }
+
+    public void setCategoryList(List<CategoryEntity> categoryList) {
+        this.categoryList = categoryList;
+    }
+
+    public List<MovieEpisodeEntity> getEpisodes() {
+        return episodes;
+    }
+
+    public void setEpisodes(List<MovieEpisodeEntity> episodes) {
+        this.episodes = episodes;
     }
 }

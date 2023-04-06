@@ -6,13 +6,20 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="https://res.cloudinary.com/dkyfbn6zy/image/upload/v1680599950/AniAniplex/image_assets/zyro-ico_mavxjb.ico" type="image/x-icon"/>
+    <link rel="icon"
+          href="https://res.cloudinary.com/dkyfbn6zy/image/upload/v1680599950/AniAniplex/image_assets/zyro-ico_mavxjb.ico"
+          type="image/x-icon"/>
     <title>${movieItem.getMovieNameVn()} - AniAniplex</title>
-    <link rel="stylesheet" href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/GridSystem_eratyj.css"/>
-    <link rel="stylesheet" href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/base_trjxvz.css"/>
-    <link rel="stylesheet" href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/navbar_dfmagn.css"/>
-    <link rel="stylesheet" href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/container_bllxju.css"/>
-    <link rel="stylesheet" href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/detail_fszcro.css"/>
+    <link rel="stylesheet"
+          href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/GridSystem_eratyj.css"/>
+    <link rel="stylesheet"
+          href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/base_trjxvz.css"/>
+    <link rel="stylesheet"
+          href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/navbar_dfmagn.css"/>
+    <link rel="stylesheet"
+          href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/container_bllxju.css"/>
+    <link rel="stylesheet"
+          href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680776725/AniAniplex/css/detail_hzckyu.css"/>
     <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -32,7 +39,11 @@
 <div class="container">
     <div class="container-wrapper">
         <div class="container-viewlist row mg-0 p-0">
-            <jsp:include page="WEB-INF/layout/container-article-animedetail.jsp?movieItem=movieItem"/>
+            <jsp:include page="WEB-INF/layout/container-article-animedetail.jsp">
+                <jsp:param name="movieItem" value="movieItem"/>
+                <jsp:param name="episodeList" value="episodeList"/>
+                <jsp:param name="categoryList" value="categoryList"/>
+            </jsp:include>
             <jsp:include page="WEB-INF/layout/container-aside-cart.jsp"/>
         </div>
     </div>

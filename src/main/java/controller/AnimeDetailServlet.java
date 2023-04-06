@@ -1,6 +1,10 @@
 package controller;
 
+import dao.CategoryDAO;
+import dao.EpisodeDAO;
 import dao.MovieDAO;
+import entity.CategoryEntity;
+import entity.MovieEpisodeEntity;
 import entity.MoviesEntity;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -9,10 +13,13 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "AnimeDetailServlet", value = "/phim")
 public class AnimeDetailServlet extends HttpServlet {
     MovieDAO movieDAO = null;
+    EpisodeDAO episodeDAO = null;
+    CategoryDAO categoryDAO = null;
 
     public AnimeDetailServlet() {
         movieDAO = new MovieDAO();
@@ -23,9 +30,16 @@ public class AnimeDetailServlet extends HttpServlet {
         String uri = req.getRequestURI();
         System.out.println(uri);
         if (uri.contains("phim")) {
-            int id = Integer.parseInt(req.getParameter("movieId"));
-            MoviesEntity movie = movieDAO.findMovie(id);
+            int movieId = Integer.parseInt(req.getParameter("movieId"));
+
+            MoviesEntity movie = movieDAO.findMovie(movieId);
             req.setAttribute("movieItem", movie);
+
+            List<MovieEpisodeEntity> episodeList = episodeDAO.findEpisodeByMovie(movieId);
+            req.setAttribute("episodeList", episodeList);
+
+            List<CategoryEntity> categoryList = categoryDAO.findCategoryByMovie(movieId);
+            req.setAttribute("categoryList", categoryList);
             req.getRequestDispatcher("anime-detail.jsp").forward(req, resp);
         } else {
             req.getRequestDispatcher("index.jsp").forward(req, resp);

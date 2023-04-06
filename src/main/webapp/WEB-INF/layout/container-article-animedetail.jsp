@@ -120,9 +120,9 @@
                                     <li>
                                         <i class="fa-regular fa-circle-dot"></i><strong>Tập mới:</strong>
                                         <div class="newEpisode">
-                                            <div>12</div>
-                                            <div>11</div>
-                                            <div>10</div>
+                                            <c:forEach items="${episodeList}" var="episode" begin="0" end="2">
+                                                <a href="" class="d-block">${episode.getMovieEpisodeNumber()}</a>
+                                            </c:forEach>
                                         </div>
                                     </li>
                                     <li>
@@ -133,9 +133,13 @@
                                         <i class="fa-regular fa-circle-dot"></i><strong>Trạng thái:</strong>
                                         <span>${movieItem.getMovieStatus()}</span>
                                     </li>
-                                    <li>
-                                        <i class="fa-regular fa-circle-dot"></i><strong>Thể loại:</strong
-                                    ><span class="text-primary1">Anime bộ, Seinen, Romance, Slice of Life, Harem, Fantasy, Comedy, Adventure</span>
+                                    <li class="d-block">
+                                        <i class="fa-regular fa-circle-dot"></i><strong>Thể loại:</strong>
+                                        <span class="text-primary1">
+                                            <c:forEach items="${categoryList}" var="category">
+                                                <a href="" class="text-primary1">${category.getCategoryName()}</a>,
+                                            </c:forEach>
+                                        </span>
                                     </li>
                                     <li>
                                         <i class="fa-regular fa-circle-dot"></i><strong>Đạo diễn:</strong>
@@ -155,7 +159,7 @@
                             <div class="c-6 sm-max-12">
                                 <ul class="info-list">
                                     <li><i class="fa-regular fa-circle-dot"></i><strong>Thời
-                                        lượng:</strong><span>12/12</span></li>
+                                        lượng:</strong><span>${movieItem.getMovieEpisode()}</span></li>
                                     <li>
                                         <i class="fa-regular fa-circle-dot"></i><strong>Chất lượng:</strong>
                                         <div class="qualityHD">HD</div>
@@ -165,7 +169,7 @@
                                         <div class="rating">PG-13 - Teens 13 tuổi trở lên</div>
                                     </li>
                                     <li><i class="fa-regular fa-circle-dot"></i><strong>Ngôn
-                                        ngữ:</strong><span>VietSub</span></li>
+                                        ngữ:</strong><span>${movieItem.getMovieLanguage()}</span></li>
                                     <li>
                                         <i class="fa-regular fa-circle-dot"></i><strong>Studio:</strong><span>${movieItem.getMovieStudio()}</span>
                                     </li>
@@ -260,6 +264,7 @@
                         item.classList.add('active-primary');
                     });
                 });
+
             </script>
         </div>
     </div>
