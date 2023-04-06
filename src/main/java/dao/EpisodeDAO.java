@@ -15,15 +15,25 @@ public class EpisodeDAO {
 //    }
 
     public static void main(String[] args) {
-        findEpisodeByMovie(3859004).forEach(category -> {
+        findEpisodeByMovie(3859004, "asc").forEach(category -> {
             System.out.println(category.toString());
         });
+//        System.out.println(findEpisode(3859004, 3).toString());
+
     }
 
-    public static List<MovieEpisodeEntity> findEpisodeByMovie(int movieId) {
-        String jpql = "SELECT ep FROM MovieEpisodeEntity ep WHERE ep.movie.movieId = :movieId order by ep.movieEpisodeNumber desc";
+    public static List<MovieEpisodeEntity> findEpisodeByMovie(int movieId, String orderby) {
+        String jpql = "SELECT ep FROM MovieEpisodeEntity ep WHERE ep.movie.movieId = :movieId order by ep.movieEpisodeNumber " + orderby;
         TypedQuery<MovieEpisodeEntity> query = entityManager.createQuery(jpql, MovieEpisodeEntity.class);
         query.setParameter("movieId", movieId);
         return query.getResultList();
+    }
+
+    public static MovieEpisodeEntity findEpisode(int movieId, int episode) {
+        String jpql = "SELECT ep FROM MovieEpisodeEntity ep WHERE ep.movie.movieId = :movieId and ep.movieEpisodeNumber = :episode";
+        TypedQuery<MovieEpisodeEntity> query = entityManager.createQuery(jpql, MovieEpisodeEntity.class);
+        query.setParameter("movieId", movieId);
+        query.setParameter("episode", episode);
+        return query.getSingleResult();
     }
 }

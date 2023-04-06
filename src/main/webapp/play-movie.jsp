@@ -4,13 +4,20 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="./assets/images/zyro-ico.ico" type="image/x-icon"/>
-    <title>Tập 1 ${movieItem.getMovieNameVn()} - AniAniplex</title>
-    <link rel="stylesheet" href="./assets/css/GridSystem.css"/>
-    <link rel="stylesheet" href="./assets/css/base.css"/>
-    <link rel="stylesheet" href="./assets/css/navbar.css"/>
-    <link rel="stylesheet" href="./assets/css/container.css"/>
-    <link rel="stylesheet" href="./assets/css/playmovie.css"/>
+    <link rel="icon"
+          href="https://res.cloudinary.com/dkyfbn6zy/image/upload/v1680599950/AniAniplex/image_assets/zyro-ico_mavxjb.ico"
+          type="image/x-icon"/>
+    <title>Tập ${tapphim.getMovieEpisodeNumber()} ${movieItem.getMovieNameVn()} - AniAniplex</title>
+    <link rel="stylesheet"
+          href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/GridSystem_eratyj.css"/>
+    <link rel="stylesheet"
+          href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/base_trjxvz.css"/>
+    <link rel="stylesheet"
+          href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/navbar_dfmagn.css"/>
+    <link rel="stylesheet"
+          href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/container_bllxju.css"/>
+    <link rel="stylesheet"
+          href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/playmovie_dgma7d.css"/>
     <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -18,20 +25,18 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./assets/javascript/main.js"></script>
 </head>
 <body>
-<jsp:include page="WEB-INF/layout/headerdefault.jsp"/>
+<jsp:include page="headerSession.jsp"/>
 <div class="space"></div>
 <div class="container">
     <div class="container-wrapper">
         <jsp:include page="WEB-INF/layout/container-top-notify.jsp"/>
         <div class="container-viewlist row mg-0 p-0">
-            <jsp:include page="WEB-INF/layout/container-article-playmovie.jsp"/>
+            <jsp:include page="WEB-INF/layout/container-article-playmovie.jsp">
+                <jsp:param name="tapphim" value="tapphim"/>
+                <jsp:param name="episodeList" value="episodeList"/>
+            </jsp:include>
             <jsp:include page="WEB-INF/layout/container-aside-cart.jsp"/>
         </div>
     </div>

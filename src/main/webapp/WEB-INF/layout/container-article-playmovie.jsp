@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <article class="l-9 m-12 s-12 xs-12">
     <div class="playmovie">
@@ -6,7 +7,7 @@
                 <iframe
                         width="100%"
                         height="550px"
-                        src="https://www.youtube.com/embed/iwxPf8SEmEU?start=1"
+                        src="${tapphim.getMovieEpisodeLink()}"
                         title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -57,18 +58,10 @@
                     <strong>TỔNG HỢP</strong>
                 </div>
                 <div class="listepisode-list">
-                    <div class="listepisode-item active">01</div>
-                    <div class="listepisode-item">02</div>
-                    <div class="listepisode-item">03</div>
-                    <div class="listepisode-item">04</div>
-                    <div class="listepisode-item">05</div>
-                    <div class="listepisode-item">06</div>
-                    <div class="listepisode-item">07</div>
-                    <div class="listepisode-item">08</div>
-                    <div class="listepisode-item">09</div>
-                    <div class="listepisode-item">10</div>
-                    <div class="listepisode-item">11</div>
-                    <div class="listepisode-item">12</div>
+                    <c:forEach items="${episodeList}" var="episode">
+                        <a href="xem-phim?movieId=${episode.getMovie().getMovieId()}&episode=${episode.getMovieEpisodeNumber()}"
+                           class="listepisode-item">${episode.getMovieEpisodeNumber()}</a>
+                    </c:forEach>
                 </div>
             </div>
             <script>
@@ -81,6 +74,8 @@
                         item.classList.add('active');
                     });
                 });
+
+
             </script>
         </div>
     </div>

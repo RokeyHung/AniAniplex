@@ -121,7 +121,7 @@
                                         <i class="fa-regular fa-circle-dot"></i><strong>Tập mới:</strong>
                                         <div class="newEpisode">
                                             <c:forEach items="${episodeList}" var="episode" begin="0" end="2">
-                                                <a href="" class="d-block">${episode.getMovieEpisodeNumber()}</a>
+                                                <a href="xem-phim?movieId=${movieItem.getMovieId()}&episode=${episode.getMovieEpisodeNumber()}" class="d-block">${episode.getMovieEpisodeNumber()}</a>
                                             </c:forEach>
                                         </div>
                                     </li>
