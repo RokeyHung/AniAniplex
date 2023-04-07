@@ -15,14 +15,14 @@ public class EpisodeDAO {
 //    }
 
     public static void main(String[] args) {
-        findEpisodeByMovie(3859004, "asc").forEach(category -> {
+        findAllEpisodeByMovie(3859004, "asc").forEach(category -> {
             System.out.println(category.toString());
         });
 //        System.out.println(findEpisode(3859004, 3).toString());
 
     }
 
-    public static List<MovieEpisodeEntity> findEpisodeByMovie(int movieId, String orderby) {
+    public static List<MovieEpisodeEntity> findAllEpisodeByMovie(int movieId, String orderby) {
         String jpql = "SELECT ep FROM MovieEpisodeEntity ep WHERE ep.movie.movieId = :movieId order by ep.movieEpisodeNumber " + orderby;
         TypedQuery<MovieEpisodeEntity> query = entityManager.createQuery(jpql, MovieEpisodeEntity.class);
         query.setParameter("movieId", movieId);

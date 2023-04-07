@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680776725/AniAniplex/css/detail_eojhj1.css"/>

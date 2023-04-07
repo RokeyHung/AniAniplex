@@ -1,4 +1,4 @@
-package controller;
+package servlet;
 
 import dao.CategoryDAO;
 import dao.EpisodeDAO;
@@ -35,7 +35,7 @@ public class AnimeDetailServlet extends HttpServlet {
             MoviesEntity movie = movieDAO.findMovie(movieId);
             req.setAttribute("movieItem", movie);
 
-            List<MovieEpisodeEntity> episodeList = episodeDAO.findEpisodeByMovie(movieId, "desc");
+            List<MovieEpisodeEntity> episodeList = episodeDAO.findAllEpisodeByMovie(movieId, "desc");
             req.setAttribute("episodeList", episodeList);
 
             List<CategoryEntity> categoryList = categoryDAO.findCategoryByMovie(movieId);

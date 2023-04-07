@@ -33,7 +33,6 @@ public class Navigation extends HttpServlet {
         } else {
             req.getRequestDispatcher("index.jsp").forward(req, resp);
         }
-        uri = null;
     }
 
     @Override

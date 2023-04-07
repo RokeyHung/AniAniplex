@@ -4,16 +4,13 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon"
-          href="https://res.cloudinary.com/dkyfbn6zy/image/upload/v1680599950/AniAniplex/image_assets/zyro-ico_mavxjb.ico"
-          type="image/x-icon"/>
     <title>Tập ${tapphim.getMovieEpisodeNumber()} ${movieItem.getMovieNameVn()} - AniAniplex</title>
     <link rel="stylesheet"
           href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/GridSystem_eratyj.css"/>
     <link rel="stylesheet"
           href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/base_trjxvz.css"/>
     <link rel="stylesheet"
-          href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/navbar_dfmagn.css"/>
+          href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/navbar_h0cuct.css"/>
     <link rel="stylesheet"
           href="https://res.cloudinary.com/dkyfbn6zy/raw/upload/v1680599871/AniAniplex/css/container_bllxju.css"/>
     <link rel="stylesheet"

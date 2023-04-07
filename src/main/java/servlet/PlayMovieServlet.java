@@ -1,4 +1,4 @@
-package controller;
+package servlet;
 
 import dao.EpisodeDAO;
 import dao.MovieDAO;
@@ -24,7 +24,7 @@ public class PlayMovieServlet extends HttpServlet {
             MoviesEntity movie = new MovieDAO().findMovie(movieId);
             req.setAttribute("movieItem", movie);
 
-            List<MovieEpisodeEntity> episodeList = new EpisodeDAO().findEpisodeByMovie(movieId, "asc");
+            List<MovieEpisodeEntity> episodeList = new EpisodeDAO().findAllEpisodeByMovie(movieId, "asc");
             req.setAttribute("episodeList", episodeList);
 
             req.setAttribute("tapphim", new EpisodeDAO().findEpisode(movieId, episode));

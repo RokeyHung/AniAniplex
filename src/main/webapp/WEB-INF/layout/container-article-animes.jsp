@@ -4,7 +4,6 @@
 <article class="l-9 m-12 s-12 xs-12">
     <div class="viewlist-slider">
         <c:forEach items="${movie}" var="movie" begin="0" end="9">
-<%--    phim/${movie.getname()}/${movie_esposite?movie_esposite:""}    --%>
             <a href="phim?movieId=${movie.getMovieId()}" class="d-block viewlist-item">
                 <div class="background-filter"></div>
                 <img src="${movie.getMoviePoster()}" alt=""/>
@@ -12,8 +11,10 @@
                     <div class="viewlist-name">${movie.getMovieNameVn()}</div>
                     <div class="viewlist-series">
                         <div class="viewlist-rate"><i class="fa-solid fa-star"></i>&nbsp;483</div>
-                        <div class="viewlist-episode"><i class="fa-regular fa-clock"></i>&nbsp;11/12</div>
-                        <div class="viewlist-year"><i class="fa-regular fa-calendar-days"></i>&nbsp;2023</div>
+                        <div class="viewlist-episode"><i class="fa-regular fa-clock"></i>&nbsp;?/${movie.getMovieEpisode()}</div>
+                        <div class="viewlist-year"><i class="fa-regular fa-calendar-days"></i>&nbsp;
+                            <fmt:formatDate value="${movie.getMovieYear()}" pattern="yyyy"/>
+                        </div>
                         <div class="viewlist-quality">HD</div>
                     </div>
                     <div class="viewlist-description">${movie.getMovieDescription()}</div>

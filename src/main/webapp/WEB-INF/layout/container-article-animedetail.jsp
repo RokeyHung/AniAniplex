@@ -1,6 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt" %>
+
+
 <article class="l-9 m-12 s-12 xs-12">
     <div class="anime__container">
         <div class="anime__container-wrapper">
@@ -17,7 +19,7 @@
                             <div class="blur-opacity"></div>
                             <div class="contend-img-following"><i class="fa-regular fa-bookmark"></i>&ensp;Theo dõi
                             </div>
-                            <div class="xemphim">XEM PHIM</div>
+                            <a href="xem-phim?movieId=${movieItem.getMovieId()}&episode=1" class="d-block xemphim">XEM PHIM</a>
                         </div>
                         <div class="anime__content-description">${movieItem.getMovieDescription()}</div>
                     </div>
@@ -43,7 +45,9 @@
                         <div class="evaluate-right">
                             <div class="evaluate-episode"><i class="fa-regular fa-clock"></i>&nbsp;11/12</div>
                             <div class="evaluate-year"><i
-                                    class="fa-regular fa-calendar-days"></i>&nbsp;${movieItem.getMovieYear()}</div>
+                                    class="fa-regular fa-calendar-days"></i>&nbsp;
+                                <fmt:formatDate value="${movieItem.getMovieYear()}" pattern="yyyy"/>
+                            </div>
                             <div class="evaluate-views"><i class="fa-solid fa-eye"></i>&nbsp
                                 <c:set var="view" value="${movieItem.getMovieViews()}"/>
                                 <fmt:formatNumber value="${view}"/>
@@ -121,7 +125,8 @@
                                         <i class="fa-regular fa-circle-dot"></i><strong>Tập mới:</strong>
                                         <div class="newEpisode">
                                             <c:forEach items="${episodeList}" var="episode" begin="0" end="2">
-                                                <a href="xem-phim?movieId=${movieItem.getMovieId()}&episode=${episode.getMovieEpisodeNumber()}" class="d-block">${episode.getMovieEpisodeNumber()}</a>
+                                                <a href="xem-phim?movieId=${movieItem.getMovieId()}&episode=${episode.getMovieEpisodeNumber()}"
+                                                   class="d-block">${episode.getMovieEpisodeNumber()}</a>
                                             </c:forEach>
                                         </div>
                                     </li>
@@ -173,8 +178,25 @@
                                     <li>
                                         <i class="fa-regular fa-circle-dot"></i><strong>Studio:</strong><span>${movieItem.getMovieStudio()}</span>
                                     </li>
-                                    <li><i class="fa-regular fa-circle-dot"></i><strong>Season:</strong><span
-                                            class="text-primary1">${movieItem.getMovieSeason()}</span></li>
+                                    <li><i class="fa-regular fa-circle-dot"></i><strong>Season:</strong>
+                                        <span class="text-primary1">
+                                            <fmt:formatDate value="${movieItem.getMovieYear()}" pattern="MM" var="month"/>
+                                            <c:choose>
+                                                <c:when test="${month == '01' || month == '02' || month == '03'}">
+                                                    Mùa Xuân
+                                                </c:when>
+                                                <c:when test="${month == '04' || month == '05' || month == '06' }">
+                                                    Mùa Hè
+                                                </c:when>
+                                                <c:when test="${month == '07' || month == '08' || month == '09' }">
+                                                    Mùa Thu
+                                                </c:when>
+                                                <c:when test="${month == '10' || month == '11' || month == '12' }">
+                                                    Mùa Đông
+                                                </c:when>
+                                            </c:choose>
+                                        </span>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -264,6 +286,7 @@
                         item.classList.add('active-primary');
                     });
                 });
+
 
             </script>
         </div>

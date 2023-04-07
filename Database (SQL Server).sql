@@ -94,38 +94,27 @@ insert into MOVIES(movie_nameVN, movie_nameJP, movie_image, movie_poster, movie_
 -- (N'Cuộc', N'Iseka', 'http', 'httpg', N'nông', N'Thứ Sáu vào lúc 21 giờ 45 phút hàng tuần', N'Phim đang chiếu/Cập Nhật Tập 11 VietSub', N'Kuraya Ryouichi', N'Nhật Bản', 4141, 2064175, 12, N'VietSub', N'Zero-G', N'Mùa Đông', ''),
 
 insert into MOVIE_EPISODE(movie_id, movie_episode_number, movie_episode_link, movie_episode_date) values
-('3859001', 1, '', '2022-12-11 03:19:59'),
-('3859001', 2, '', '2023-01-31 19:32:15'),
-('3859002', 1, '', '2022-12-17 11:56:54'),
-('3859002', 2, '', '2023-03-10 02:42:04'),
-('3859003', 1, '', '2023-03-12 12:56:29'),
+('3859001', 1, 'https://www.youtube.com/embed/V3wcFVX5PGs', '2022-12-11 03:19:59'),
+('3859001', 2, 'https://www.youtube.com/embed/DTil5QCQkZk', '2023-01-31 19:32:15'),
+('3859002', 1, 'https://www.youtube.com/embed/ckXXDi6HC8Q', '2022-12-17 11:56:54'),
+('3859002', 2, 'https://www.youtube.com/embed/9fE3wFPFvvM', '2023-03-10 02:42:04'),
+('3859003', 1, 'https://www.youtube.com/embed/LDZQXsr_Gl0', '2023-03-12 12:56:29'),
 ('3859004', 1, 'https://www.youtube.com/embed/oiR99s5g63E', '2023-03-10 19:48:27'),
 ('3859004', 2, 'https://www.youtube.com/embed/_TyL5BrozVk', '2023-03-10 11:17:29'),
 ('3859004', 3, 'https://www.youtube.com/embed/relH1l8ihTU', '2023-02-14 20:35:19'),
-('3859005', 1, '', '2023-03-01 22:45:14'),
-('3859005', 2, '', '2022-12-16 18:08:15'),
-('3859006', 1, '', '2022-12-17 18:58:25'),
-('3859006', 2, '', '2023-01-27 18:49:39'),
-('3859007', 1, '', '2022-12-26 03:05:41'),
-('3859007', 2, '', '2023-02-10 03:36:38'),
-('3859008', 1, '', '2023-02-18 21:25:57'),
-('3859008', 2, '', '2023-02-01 18:46:58'),
-('3859009', 1, '', '2023-01-26 08:50:35'),
-('3859009', 2, '', '2023-02-17 16:08:04'),
-('3859010', 1, '', '2023-02-03 11:38:54'),
-('3859010', 2, '', '2022-12-14 05:52:16'),
-('3859011', 1, '', '2023-02-15 07:23:08'),
-('3859011', 2, '', '2023-03-10 14:34:19'),
-('3859012', 1, '', '2023-03-09 15:20:20'),
-('3859012', 2, '', '2023-02-28 06:39:00'),
-('3859013', 1, '', '2022-12-02 05:48:04'),
-('3859013', 2, '', '2023-01-07 06:59:54'),
-('3859014', 1, '', '2023-01-04 03:36:34'),
-('3859014', 2, '', '2023-03-01 16:12:08'),
-('3859015', 1, '', '2023-01-09 15:29:11'),
-('3859015', 2, '', '2023-02-22 09:01:48'),
-('3859016', 1, '', '2022-12-08 20:15:59'),
-('3859016', 2, '', '2023-01-22 03:58:09'),
+('3859007', 1, 'https://www.youtube.com/embed/uBwhg7IRpkc', '2022-12-26 03:05:41'),
+('3859007', 2, 'https://www.youtube.com/embed/Kaz6MFjYqxw', '2023-02-10 03:36:38'),
+('3859008', 2, 'https://www.youtube.com/embed/TVi5C6kQjkQ', '2023-02-01 18:46:58'),
+('3859009', 1, 'https://www.youtube.com/embed/ajjZ-9gW6e8', '2023-01-26 08:50:35'),
+('3859009', 2, 'https://www.youtube.com/embed/SJye3J7qSec', '2023-02-17 16:08:04'),
+('3859009', 3, 'https://www.youtube.com/embed/so5-RxW1of0', '2023-02-17 16:08:04'),
+('3859010', 1, 'https://www.youtube.com/embed/1XHHsvJxF2E', '2023-02-03 11:38:54'),
+('3859010', 2, 'https://www.youtube.com/embed/WEjIdwpojMg', '2022-12-14 05:52:16'),
+('3859013', 1, 'https://www.youtube.com/embed/N9xHWd2qR5I', '2022-12-02 05:48:04'),
+('3859013', 2, 'https://www.youtube.com/embed/gau5GyBjoZw', '2023-01-07 06:59:54'),
+('3859013', 3, 'https://www.youtube.com/embed/S_k8yn1pyDY', '2023-01-07 06:59:54'),
+('3859014', 1, 'https://www.youtube.com/embed/BIUw-PG9hIU', '2023-01-04 03:36:34'),
+('3859015', 1, 'https://www.youtube.com/embed/MPpBhLUQVmE', '2023-01-09 15:29:11'),
 ('3859017', 1, 'https://www.youtube.com/embed/qPSEBIprzsY', '2023-01-04 20:18:41')
 
 insert into CATEGORY(movie_id_category, category_name) values
@@ -315,3 +304,6 @@ ALTER TABLE FAVORITES ADD CONSTRAINT fk_favorite_movie FOREIGN KEY (favorite_mov
 ALTER TABLE SHARE_SOCIAL ADD CONSTRAINT fk_share_user FOREIGN KEY (share_user) REFERENCES USERS (user_id);
 ALTER TABLE SHARE_SOCIAL ADD CONSTRAINT fk_share_movie FOREIGN KEY (share_movie) REFERENCES MOVIES (movie_id);
 ALTER TABLE MOVIE_EPISODE ADD CONSTRAINT fk_movie_episode_number FOREIGN KEY (movie_id) REFERENCES MOVIES (movie_id);
+
+ALTER TABLE MOVIE_EPISODE
+DROP CONSTRAINT fk_movie_episode_number
