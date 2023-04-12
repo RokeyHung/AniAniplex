@@ -42,6 +42,11 @@
                     <li class="m-4 w-100">
                         <a href="history"><i class="fa-solid fa-clock-rotate-left"></i>Lịch sử</a>
                     </li>
+                    <c:if test="${sessionScope.user_title == 'Administrator'}">
+                        <li>
+                            <a href="admin"><i class="fa-solid fa-user-gear"></i> Administrator</a>
+                        </li>
+                    </c:if>
                     <li class="m-4 w-100">
                         <a href="outdoorUser"><i class="fa-solid fa-right-from-bracket"></i>Thoát</a>
                     </li>
@@ -139,6 +144,11 @@
                     <li>
                         <a href="history"><i class="fa-solid fa-clock-rotate-left"></i>Lịch sử</a>
                     </li>
+                    <c:if test="${sessionScope.user_title == 'Administrator'}">
+                        <li>
+                            <a href="admin"><i class="fa-solid fa-user-gear"></i> Administrator</a>
+                        </li>
+                    </c:if>
                     <li>
                         <a href="outdoorUser"><i class="fa-solid fa-right-from-bracket"></i>Thoát</a>
                     </li>

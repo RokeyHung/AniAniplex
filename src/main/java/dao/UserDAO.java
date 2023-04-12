@@ -5,13 +5,23 @@ import entity.UsersEntity;
 import utils.JPAUtil;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 public class UserDAO {
-    private static EntityManager entityManager;
+    private static EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 
     public UserDAO() {
-        entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
+//        entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
+    }
+
+    public static void main(String[] args) {
+        java.sql.Date sqlDate = new java.sql.Date(new Date().getTime());
+        try {
+            createUser(new UsersEntity("fullname", "username", "password", "email", null, true, "Member", null, sqlDate));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static List<UsersEntity> findAll() {
@@ -19,7 +29,7 @@ public class UserDAO {
         return query.getResultList();
     }
 
-    public void createUser(UsersEntity user) {
+    public static void createUser(UsersEntity user) {
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
         entityManager.persist(user);

@@ -35,6 +35,6 @@ public class Start extends HttpServlet implements ServletContextListener {
         String normalizedStr = Normalizer.normalize(text, Normalizer.Form.NFD).replaceAll("\\p{M}", "");
         // Thay thế khoảng trắng bằng dấu gạch ngang
         String outputStr = Pattern.compile("\\s+").matcher(normalizedStr).replaceAll("-").toLowerCase();
-        return text;
+        return outputStr;
     }
 }

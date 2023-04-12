@@ -46,8 +46,7 @@ public class UsersEntity {
     public UsersEntity() {
     }
 
-    public UsersEntity(int userId, String userName, String userAccount, String userPassword, String userEmail, String userImage, Boolean userGender, String userTitle, String userDescription, Date userRegistraionDate) {
-        this.userId = userId;
+    public UsersEntity(String userName, String userAccount, String userPassword, String userEmail, String userImage, Boolean userGender, String userTitle, String userDescription, Date userRegistraionDate) {
         this.userName = userName;
         this.userAccount = userAccount;
         this.userPassword = userPassword;

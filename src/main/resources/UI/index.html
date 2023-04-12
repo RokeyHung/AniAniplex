@@ -182,7 +182,7 @@
             <div class="container-wrapper">
                 <div class="account">
                     <div class="account-wrapper">
-                        <div id="display1">
+                        <!-- <div id="display1">
                             <form action="login" class="form-login">
                                 <header>ĐĂNG NHẬP!</header>
                                 <div class="field-input">
@@ -201,10 +201,14 @@
                                     <span><span>Bạn chưa có tài khoản?&nbsp;</span><span id="toggleDisplay1">Đăng ký</span>&nbsp;ngay </span>
                                 </div>
                             </div>
-                        </div>
-                        <div id="display2" style="display: none">
+                        </div> -->
+                        <!-- <div id="display2">
                             <form action="register" class="form-register">
                                 <header>ĐĂNG KÝ!</header>
+                                <div class="field-input">
+                                    <i class="fa-solid fa-signature"></i>
+                                    <input type="text" name="fullname" minlength="3" placeholder="Họ và tên" />
+                                </div>
                                 <div class="field-input">
                                     <i class="fa-solid fa-user"></i>
                                     <input type="text" name="username" maxlength="40" minlength="6" placeholder="Tài khoản" />
@@ -221,6 +225,16 @@
                                     <i class="fa-solid fa-envelope"></i>
                                     <input type="text" name="email" placeholder="Email" />
                                 </div>
+                                <div class="field-input field-gender">
+                                    <div class="cursor-pointer">
+                                        <input type="radio" name="gender" value="true" checked id="gender-male" />
+                                        <label for="gender-male">Nam</label>
+                                    </div>
+                                    <div class="cursor-pointer">
+                                        <input type="radio" name="gender" value="true" id="gender-female" />
+                                        <label for="gender-female">Nữ</label>
+                                    </div>
+                                </div>
                                 <div class="account-btn"><button>ĐĂNG KÝ</button></div>
                             </form>
                             <div class="HadAccount">
@@ -228,8 +242,8 @@
                                     <span><span> Đã có tài khoản?&nbsp;</span><span id="toggleDisplay2">Đăng nhập</span>&nbsp;ngay </span>
                                 </div>
                             </div>
-                        </div>
-                        <div id="display3" style="display: none">
+                        </div> -->
+                        <div id="display3">
                             <form action="login" class="form-login">
                                 <header>QUÊN MẬT KHẨU!</header>
                                 <div class="field-input">
@@ -247,7 +261,14 @@
                                 <div class="field-input">
                                     <i class="fa-solid fa-lock"></i>
                                     <input type="text" name="verificationCode" maxlength="10" minlength="6" placeholder="Verification Code" />
-                                    <input style="border: 1px solid #fff; max-width: 90px; font-size: 1.2rem;" class="cursor-pointer" type="submit" value="GET CODE" onclick="return false;" />
+                                    <input
+                                        style="border: 1px solid #fff; max-width: 90px; font-size: 1.2rem"
+                                        class="cursor-pointer"
+                                        type="submit"
+                                        class="get-code"
+                                        value="GET CODE"
+                                        onclick="sendRequest()"
+                                    />
                                 </div>
                                 <div class="account-btn"><button>QUÊN MẬT KHẨU</button></div>
                             </form>
@@ -257,8 +278,15 @@
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                     <script>
+                        function sendRequest() {
+                            var xhttp = new XMLHttpRequest();
+                            xhttp.open('POST', 'getcode', true);
+                            xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                            xhttp.send();
+                        }
                         const toggleDisplay1 = document.getElementById('toggleDisplay1');
                         const toggleDisplay2 = document.getElementById('toggleDisplay2');
                         const toggleDisplay3 = document.getElementById('toggleDisplay3');

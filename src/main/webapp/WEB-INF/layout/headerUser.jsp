@@ -33,6 +33,11 @@
                     <li class="m-4 w-100">
                         <a href="history"><i class="fa-solid fa-clock-rotate-left"></i>Lịch sử</a>
                     </li>
+                    <c:if test="${sessionScope.user_title == 'Administrator'}">
+                        <li>
+                            <a href="admin"><i class="fa-solid fa-user-gear"></i> Administrator</a>
+                        </li>
+                    </c:if>
                     <li class="m-4 w-100">
                         <a href="outdoorUser"><i class="fa-solid fa-right-from-bracket"></i>Thoát</a>
                     </li>
@@ -107,11 +112,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="nav__account">
-                    <div class="nav__account-btn">
-                        <a href="#">Đăng nhập</a>
-                    </div>
-                </div> -->
             </li>
             <div class="dropdown hideOnMobile">
                 <%--@declare id="checkshow"--%><label for="checkshow" class="dropdown-title">
@@ -135,6 +135,11 @@
                     <li>
                         <a href="history"><i class="fa-solid fa-clock-rotate-left"></i>Lịch sử</a>
                     </li>
+                    <c:if test="${sessionScope.user_title == 'Administrator'}">
+                        <li>
+                            <a href="admin"><i class="fa-solid fa-user-gear"></i> Administrator</a>
+                        </li>
+                    </c:if>
                     <li>
                         <a href="outdoorUser"><i class="fa-solid fa-right-from-bracket"></i>Thoát</a>
                     </li>

@@ -1,6 +1,7 @@
 package controller;
 
 import dao.FavoriteDAO;
+import dao.MovieDAO;
 import dao.UserDAO;
 import entity.FavoritesEntity;
 import entity.MoviesEntity;
@@ -15,7 +16,7 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet({"/", "/thong-tin-tai-khoan", "/favorites", "/history", "/outdoorUser"})
+@WebServlet({"/", "/thong-tin-tai-khoan", "/favorites", "/history", "/outdoorUser", "/admin"})
 public class Navigation extends HttpServlet {
     UserDAO userDAO = null;
     FavoriteDAO favoriteDAO = null;
@@ -53,6 +54,10 @@ public class Navigation extends HttpServlet {
         } else if (uri.contains("outdoorUser")) {
             session.invalidate();
             req.getRequestDispatcher("index.jsp").forward(req, resp);
+        } else if (uri.contains("admin")) {
+            List<MoviesEntity> movieList = new MovieDAO().findAll();
+            req.setAttribute("movies", movieList);
+            req.getRequestDispatcher("ManagerMovies.jsp?movies=movies").forward(req, resp);
         }
     }
 }
