@@ -74,7 +74,8 @@ public class MoviesEntity {
     public MoviesEntity() {
     }
 
-    public MoviesEntity(String movieNameVn, String movieNameJp, String movieImage, String moviePoster, String movieDescription, String movieShowtimes, String movieStatus, String movieDirector, String movieCountry, Integer movieEpisode, String movieLanguage, String movieStudio, Date movieYear) {
+    public MoviesEntity(int movieId, String movieNameVn, String movieNameJp, String movieImage, String moviePoster, String movieDescription, String movieShowtimes, String movieStatus, String movieDirector, String movieCountry, Integer movieEpisode, String movieLanguage, String movieStudio, Date movieYear) {
+        this.movieId = movieId;
         this.movieNameVn = movieNameVn;
         this.movieNameJp = movieNameJp;
         this.movieImage = movieImage;

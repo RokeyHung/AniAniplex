@@ -9,11 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 public class UserDAO {
-    private static EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
-
-    public UserDAO() {
-//        entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
-    }
+    private static final EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 
     public static void main(String[] args) {
         java.sql.Date sqlDate = new java.sql.Date(new Date().getTime());

@@ -7,6 +7,7 @@ import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
 import jakarta.servlet.http.HttpServlet;
+
 import java.text.Normalizer;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -14,7 +15,7 @@ import java.util.regex.Pattern;
 @WebListener
 public class Start extends HttpServlet implements ServletContextListener {
 
-    private MovieDAO movieDAO = new MovieDAO();
+    private final MovieDAO movieDAO = new MovieDAO();
 
     @Override
     public void contextInitialized(ServletContextEvent event) {

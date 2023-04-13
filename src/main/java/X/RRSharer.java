@@ -7,8 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RRSharer {
-    private static Map<Long, HttpServletRequest> requestMap = new HashMap<>();
-    private static Map<Long, HttpServletResponse> responseMap = new HashMap<>();
+    private static final Map<Long, HttpServletRequest> requestMap = new HashMap<>();
+    private static final Map<Long, HttpServletResponse> responseMap = new HashMap<>();
 
     public static void add(HttpServletRequest req, HttpServletResponse resp) {
         requestMap.put(Thread.currentThread().getId(), req);

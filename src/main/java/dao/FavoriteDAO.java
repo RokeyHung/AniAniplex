@@ -11,11 +11,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 
 public class FavoriteDAO {
-    private static EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
-
-//    public FavoriteDAO() {
-//        entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
-//    }
+    private static final EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 
     public static void main(String[] args) {
         findMovieFavoriteByUsername("hhungnm").forEach(movie -> {
@@ -26,7 +22,7 @@ public class FavoriteDAO {
     static UserDAO userDAO = new UserDAO();
 
     public static List<FavoritesEntity> findMovieFavoriteByUsername(String username) {
-        UsersEntity user = userDAO.findUserByJPQL(username);
+        UsersEntity user = UserDAO.findUserByJPQL(username);
         String jpql = "SELECT DISTINCT f from FavoritesEntity f where f.user.userId = :user order by f.FavoriteDate desc";
         TypedQuery<FavoritesEntity> query = entityManager.createQuery(jpql, FavoritesEntity.class);
         query.setParameter("user", user.getUserId());

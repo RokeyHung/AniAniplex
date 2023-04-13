@@ -8,11 +8,7 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 public class CategoryDAO {
-    private static EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
-
-//    public CategoryDAO() {
-//        entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
-//    }
+    private static final EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 
     public static void main(String[] args) {
         findCategoryByMovie(3859001).forEach(category -> {

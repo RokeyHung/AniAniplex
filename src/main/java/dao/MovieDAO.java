@@ -9,11 +9,7 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 public class MovieDAO {
-    private static EntityManager entityManager;
-
-    public MovieDAO() {
-        entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
-    }
+    private static final EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 
     public List<MoviesEntity> findAll() {
         TypedQuery<MoviesEntity> query = entityManager.createQuery("SELECT u FROM entity.MoviesEntity u", MoviesEntity.class);

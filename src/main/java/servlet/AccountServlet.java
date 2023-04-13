@@ -15,11 +15,7 @@ import java.util.Date;
 @WebServlet(name = "account", value = {
         "/account", "/login", "/register", "/forgot-password"})
 public class AccountServlet extends HttpServlet {
-    UserDAO userDAO = null;
-
-    public AccountServlet() {
-        userDAO = new UserDAO();
-    }
+    UserDAO userDAO = new UserDAO();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -56,7 +52,7 @@ public class AccountServlet extends HttpServlet {
             boolean gender = Boolean.parseBoolean(req.getParameter("gender"));
 
             java.sql.Date sqlDate = new java.sql.Date(new Date().getTime());
-            UsersEntity user = userDAO.findUserByJPQL(username);
+            UsersEntity user = UserDAO.findUserByJPQL(username);
             if (password.equals(repassword) && !user.getUserAccount().equalsIgnoreCase(username)) {
                 try {
                     userDAO.createUser(new UsersEntity(fullname, username, password, email, null, gender, "Member", null, sqlDate));

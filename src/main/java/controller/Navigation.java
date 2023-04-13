@@ -42,11 +42,11 @@ public class Navigation extends HttpServlet {
         HttpSession session = req.getSession();
         String sessionUsername = session.getAttribute("username").toString();
         if (uri.contains("thong-tin-tai-khoan")) {
-            UsersEntity user = userDAO.findUserByJPQL(sessionUsername);
+            UsersEntity user = UserDAO.findUserByJPQL(sessionUsername);
             req.setAttribute("user", user);
             req.getRequestDispatcher("accountCenter.jsp?user=user").forward(req, resp);
         } else if (uri.contains("favorites")) {
-            List<FavoritesEntity> moviesList = favoriteDAO.findMovieFavoriteByUsername(sessionUsername);
+            List<FavoritesEntity> moviesList = FavoriteDAO.findMovieFavoriteByUsername(sessionUsername);
             req.setAttribute("movies", moviesList);
             req.getRequestDispatcher("favoriteUser.jsp?movies=movies").forward(req, resp);
         } else if (uri.contains("history")) {

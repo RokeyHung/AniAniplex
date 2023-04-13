@@ -17,13 +17,7 @@ import java.util.List;
 
 @WebServlet(name = "AnimeDetailServlet", value = "/phim")
 public class AnimeDetailServlet extends HttpServlet {
-    MovieDAO movieDAO = null;
-    EpisodeDAO episodeDAO = null;
-    CategoryDAO categoryDAO = null;
-
-    public AnimeDetailServlet() {
-        movieDAO = new MovieDAO();
-    }
+    MovieDAO movieDAO = new MovieDAO();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -35,10 +29,10 @@ public class AnimeDetailServlet extends HttpServlet {
             MoviesEntity movie = movieDAO.findMovie(movieId);
             req.setAttribute("movieItem", movie);
 
-            List<MovieEpisodeEntity> episodeList = episodeDAO.findAllEpisodeByMovie(movieId, "desc");
+            List<MovieEpisodeEntity> episodeList = EpisodeDAO.findAllEpisodeByMovie(movieId, "desc");
             req.setAttribute("episodeList", episodeList);
 
-            List<CategoryEntity> categoryList = categoryDAO.findCategoryByMovie(movieId);
+            List<CategoryEntity> categoryList = CategoryDAO.findCategoryByMovie(movieId);
             req.setAttribute("categoryList", categoryList);
             req.getRequestDispatcher("anime-detail.jsp").forward(req, resp);
         } else {

@@ -164,7 +164,7 @@
                     </div>
                     <div class="description">
                         <h3>Description</h3>
-                        <textarea name="" id="textarea">${movieItem.getMovieDescription()}</textarea>
+                        <textarea name="movieDescription" id="textarea">${movieItem.getMovieDescription()}</textarea>
                     </div>
                     <div class="row w-100 mg-0">
                         <div class="c-6 sm-ad-12 pe-16" style="max-width: 20%">
@@ -191,7 +191,7 @@
                     <div class="ps-16 pe-16">${message}</div>
                     <br>
                     <div class="action user-select-none">
-                        <button type="submit" formaction="new-episode" class="d-block btn btn-createNew">
+                        <button type="submit" formaction="new-episode?movieId=${movieItem.getMovieId()}" class="d-block btn btn-createNew">
                             Thêm tập mới
                         </button>
                         <button type="submit" formaction="update?movieId=${movieItem.getMovieId()}"
