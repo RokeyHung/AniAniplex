@@ -53,11 +53,11 @@ public class Navigation extends HttpServlet {
 
         } else if (uri.contains("outdoorUser")) {
             session.invalidate();
-            req.getRequestDispatcher("index.jsp").forward(req, resp);
+            resp.sendRedirect("http://localhost:8080/AniAniplex/");
         } else if (uri.contains("admin")) {
             List<MoviesEntity> movieList = new MovieDAO().findAll();
             req.setAttribute("movies", movieList);
-            req.getRequestDispatcher("ManagerMovies.jsp?movies=movies").forward(req, resp);
+            req.getRequestDispatcher("/admin/ManagerMovies.jsp?movies=movies").forward(req, resp);
         }
     }
 }

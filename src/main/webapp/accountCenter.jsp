@@ -13,7 +13,7 @@
 <nav class="navbar">
     <div class="wrapper">
         <div class="logo">
-            <a href="/" class="logo-link">
+            <a href="http://localhost:8080/AniAniplex/" class="logo-link">
                 <img src="https://res.cloudinary.com/dkyfbn6zy/image/upload/v1680599949/AniAniplex/image_assets/Aniplex-Logo.black_fiq1w7.svg" class="logo-img"
                      alt="logo"/>
             </a>

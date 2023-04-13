@@ -1,6 +1,5 @@
 package X;
 
-import entity.UsersEntity;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebFilter;

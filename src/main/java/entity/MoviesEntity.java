@@ -74,6 +74,41 @@ public class MoviesEntity {
     public MoviesEntity() {
     }
 
+    public MoviesEntity(String movieNameVn, String movieNameJp, String movieImage, String moviePoster, String movieDescription, String movieShowtimes, String movieStatus, String movieDirector, String movieCountry, Integer movieEpisode, String movieLanguage, String movieStudio, Date movieYear) {
+        this.movieNameVn = movieNameVn;
+        this.movieNameJp = movieNameJp;
+        this.movieImage = movieImage;
+        this.moviePoster = moviePoster;
+        this.movieDescription = movieDescription;
+        this.movieShowtimes = movieShowtimes;
+        this.movieStatus = movieStatus;
+        this.movieDirector = movieDirector;
+        this.movieCountry = movieCountry;
+        this.movieEpisode = movieEpisode;
+        this.movieLanguage = movieLanguage;
+        this.movieStudio = movieStudio;
+        this.movieYear = movieYear;
+    }
+
+    public MoviesEntity(String movieNameVn, String movieNameJp, String movieImage, String moviePoster, String movieDescription, String movieShowtimes, String movieStatus, String movieDirector, String movieCountry, Integer movieFollowers, Integer movieViews, Integer movieEpisode, String movieLanguage, String movieStudio, String movieSeason, Date movieYear) {
+        this.movieNameVn = movieNameVn;
+        this.movieNameJp = movieNameJp;
+        this.movieImage = movieImage;
+        this.moviePoster = moviePoster;
+        this.movieDescription = movieDescription;
+        this.movieShowtimes = movieShowtimes;
+        this.movieStatus = movieStatus;
+        this.movieDirector = movieDirector;
+        this.movieCountry = movieCountry;
+        this.movieFollowers = movieFollowers;
+        this.movieViews = movieViews;
+        this.movieEpisode = movieEpisode;
+        this.movieLanguage = movieLanguage;
+        this.movieStudio = movieStudio;
+        this.movieSeason = movieSeason;
+        this.movieYear = movieYear;
+    }
+
     public MoviesEntity(int movieId, String movieNameVn, String movieNameJp, String movieImage, String moviePoster, String movieDescription, String movieShowtimes, String movieStatus, String movieDirector, String movieCountry, Integer movieFollowers, Integer movieViews, Integer movieEpisode, String movieLanguage, String movieStudio, String movieSeason, Date movieYear) {
         this.movieId = movieId;
         this.movieNameVn = movieNameVn;

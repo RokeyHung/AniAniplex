@@ -23,7 +23,10 @@ public class AccountServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("account.jsp").forward(req, resp);
+        HttpSession session = req.getSession();
+        if (session.getAttribute("username") == null) {
+            req.getRequestDispatcher("account.jsp").forward(req, resp);
+        } else resp.sendRedirect("http://localhost:8080/AniAniplex/");
     }
 
 
@@ -39,7 +42,7 @@ public class AccountServlet extends HttpServlet {
                 session.setAttribute("username", username);
                 session.setAttribute("password", password);
                 session.setAttribute("user_title", user.getUserTitle());
-                req.getRequestDispatcher("index.jsp").forward(req, resp);
+                resp.sendRedirect("http://localhost:8080/AniAniplex/");
             } else {
                 req.setAttribute("message", "Đăng nhập không thành công!");
                 req.getRequestDispatcher("account.jsp?message=message").forward(req, resp);

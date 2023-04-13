@@ -53,7 +53,7 @@
             </div>
             <div class="listAni-body w-100">
                 <div class="row mx-6 p-0">
-                    <c:forEach items="${movie}" var="movie" begin="0" end="9">
+                    <c:forEach items="${movie}" var="movie">
                         <a href="phim?movieId=${movie.getMovieId()}" class="d-block xs-6 s-4 sm-3 m-20 l-20">
                             <div class="listAni-item">
                                 <div class="item-image">
