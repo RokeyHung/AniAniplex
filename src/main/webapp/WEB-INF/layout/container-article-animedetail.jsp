@@ -17,9 +17,18 @@
                                  alt=""/>
                             <div class="btn-play"><i class="fa-solid fa-play"></i></div>
                             <div class="blur-opacity"></div>
-                            <div class="contend-img-following"><i class="fa-regular fa-bookmark"></i>&ensp;Theo dõi
-                            </div>
-                            <a href="xem-phim?movieId=${movieItem.getMovieId()}&episode=1" class="d-block xemphim">XEM PHIM</a>
+                            <c:if test="${sessionScope.bookmark_favorite == false}">
+                                <a href="yeu-thich?movieId=${movieItem.getMovieId()}" class="d-block contend-img-following">
+                                    <i class="fa-regular fa-bookmark"></i>&ensp;Theo dõi
+                                </a>
+                            </c:if>
+                            <c:if test="${sessionScope.bookmark_favorite == true}">
+                                <a href="bo-yeu-thich?movieId=${movieItem.getMovieId()}" class="d-block contend-img-following">
+                                    <i class="fa-solid fa-link-slash"></i>&ensp;Bỏ theo dõi
+                                </a>
+                            </c:if>
+                            <a href="xem-phim?movieId=${movieItem.getMovieId()}&episode=1" class="d-block xemphim">XEM
+                                PHIM</a>
                         </div>
                         <div class="anime__content-description">${movieItem.getMovieDescription()}</div>
                     </div>
@@ -180,7 +189,8 @@
                                     </li>
                                     <li><i class="fa-regular fa-circle-dot"></i><strong>Season:</strong>
                                         <span class="text-primary1">
-                                            <fmt:formatDate value="${movieItem.getMovieYear()}" pattern="MM" var="month"/>
+                                            <fmt:formatDate value="${movieItem.getMovieYear()}" pattern="MM"
+                                                            var="month"/>
                                             <c:choose>
                                                 <c:when test="${month == '01' || month == '02' || month == '03'}">
                                                     Mùa Xuân

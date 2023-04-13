@@ -35,6 +35,7 @@ public class AccountServlet extends HttpServlet {
             String password = req.getParameter("dn-password");
             UsersEntity user = userDAO.findUserByJPQL(username);
             if (user.getUserAccount().equals(username) && user.getUserPassword().equals(password)) {
+                session.setAttribute("userId", user.getUserId());
                 session.setAttribute("username", username);
                 session.setAttribute("password", password);
                 session.setAttribute("user_title", user.getUserTitle());

@@ -26,7 +26,7 @@ public class CreateEpisodeEntity {
     public CreateEpisodeEntity() {
     }
 
-    public CreateEpisodeEntity( Integer movieId, Integer movieEpisodeNumber, String movieEpisodeLink, Date movieEpisodeDate) {
+    public CreateEpisodeEntity(Integer movieId, Integer movieEpisodeNumber, String movieEpisodeLink, Date movieEpisodeDate) {
         this.movieId = movieId;
         this.movieEpisodeNumber = movieEpisodeNumber;
         this.movieEpisodeLink = movieEpisodeLink;

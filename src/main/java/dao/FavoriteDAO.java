@@ -1,7 +1,7 @@
 package dao;
 
+import entity.CreateFavoriteEntity;
 import entity.FavoritesEntity;
-import entity.MoviesEntity;
 import entity.UsersEntity;
 import utils.JPAUtil;
 
@@ -14,12 +14,11 @@ public class FavoriteDAO {
     private static final EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 
     public static void main(String[] args) {
-        findMovieFavoriteByUsername("hhungnm").forEach(movie -> {
-            System.out.println(movie.toString());
-        });
+//        findMovieFavoriteByUsername("hhungnm").forEach(movie -> {
+//            System.out.println(movie.toString());
+//        });
+        System.out.println(find1MovieFavoriteUser(201001, 3859009));
     }
-
-    static UserDAO userDAO = new UserDAO();
 
     public static List<FavoritesEntity> findMovieFavoriteByUsername(String username) {
         UsersEntity user = UserDAO.findUserByJPQL(username);
@@ -29,20 +28,21 @@ public class FavoriteDAO {
         return query.getResultList();
     }
 
-    public static List<FavoritesEntity> findAllFavoriteUser(String username) {
-        TypedQuery<FavoritesEntity> query = entityManager.createQuery("SELECT f FROM FavoritesEntity f WHERE f.userId = :userid", FavoritesEntity.class);
-        query.setParameter("userid", username);
-        return query.getResultList();
+    public static CreateFavoriteEntity find1MovieFavoriteUser(int userId, int movieId) {
+        TypedQuery<CreateFavoriteEntity> query = entityManager.createQuery("SELECT f FROM CreateFavoriteEntity f WHERE f.favoriteUser = :userId and f.favoriteMovie = :movieId", CreateFavoriteEntity.class);
+        query.setParameter("userId", userId);
+        query.setParameter("movieId", movieId);
+        return query.getSingleResult();
     }
 
-    public void createFavorite(FavoritesEntity favorite) {
+    public static void createFavorite(CreateFavoriteEntity favorite) {
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
         entityManager.persist(favorite);
         transaction.commit();
     }
 
-    public void deleteFavorite(FavoritesEntity favorite) {
+    public static void deleteFavorite(CreateFavoriteEntity favorite) {
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
         entityManager.remove(entityManager.contains(favorite) ? favorite : entityManager.merge(favorite));
